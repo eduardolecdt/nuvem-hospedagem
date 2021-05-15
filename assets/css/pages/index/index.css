@@ -6,6 +6,18 @@ INDEX
 
 @import '../../global/global.css';
 
+/* Elements */
+
+@import '../../elements/nav.css';
+@import '../../elements/footer.css';
+
 /* Partials */
 
 @import './partials/header.css';
+@import './partials/sectionBeneficios.css';
+@import './partials/sectionDepoimentos.css';
+@import './partials/sectionDominio.css';
+@import './partials/sectionProdutos.css';
+@import './partials/sectionProdutos.css';
+@import './partials/sectionServidores.css';
+@import './partials/sectionSites.css';
