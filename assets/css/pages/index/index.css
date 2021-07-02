@@ -13,6 +13,7 @@ INDEX
 
 /* Partials */
 
+@import './partials/sectionLoading.css';
 @import './partials/header.css';
 @import './partials/sectionBeneficios.css';
 @import './partials/sectionDepoimentos.css';

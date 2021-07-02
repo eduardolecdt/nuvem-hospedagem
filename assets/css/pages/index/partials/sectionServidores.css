@@ -5,7 +5,69 @@ INDEX > SECTION.servidores
 */
 
 section.servidores {
-  display: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  background-image: url('../../../../../files/images/linhas-tecnologicas-4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section.servidores img.mundo {
+  position: absolute;
+  left: 80px;
+  bottom: -50px;
+  width: 80%;
+  animation: mundoMovendo 60s infinite linear;
+}
+
+@keyframes mundoMovendo {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+section.servidores .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40%;
+  background-color: var(--cor-secundaria-3);
+  border-radius: 20px 0 0 20px;
+  border-right: 10px solid var(--cor-principal);
+  padding: 50px 80px 50px 50px;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  z-index: 2;
+}
+
+section.servidores .quadro h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.5;
+  color: var(--cor-branco);
+}
+
+section.servidores .quadro h2 span {
+  color: var(--cor-principal);
+}
+
+section.servidores .quadro p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--cor-texto);
+  padding: 20px 0 0 0;
 }
 
 /*

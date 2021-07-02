@@ -5,12 +5,12 @@ SCROLLBAR
 */
 
 html {
-  scrollbar-color: #F7F7F7 #4C5D68;
+  scrollbar-color: #132D41 #2EC9D4;
   scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #F7F7F7;
+  background-color: #132D41;
   width: 4px;
   height: 4px;
   border-radius: 10px;
@@ -23,7 +23,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #4C5D68;
+  background-color: #2EC9D4;
   width: 4px;
   height: 4px;
   border-radius: 10px;

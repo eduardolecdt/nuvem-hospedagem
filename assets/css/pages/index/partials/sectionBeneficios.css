@@ -5,7 +5,23 @@ INDEX > SECTION.beneficios
 */
 
 section.beneficios {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background: var(--cor-secundaria-3);
+  background-image: url('../../../../../files/images/linhas-tecnologicas-3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section.beneficios .itens {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
 }
 
 /*
