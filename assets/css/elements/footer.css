@@ -5,7 +5,28 @@ ELEMENTS > FOOTER
 */
 
 footer {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 120px 30px;
+  background-color: var(--cor-secundaria-4);
+}
+
+footer img {
+  width: 100%;
+  max-width: 300px;
+}
+
+footer p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--cor-texto);
+  padding: 20px 0 0 0;
+  width: 100%;
+  max-width: 600px;
 }
 
 /*

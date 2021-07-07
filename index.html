@@ -213,7 +213,7 @@
     <!-- Itens -->
     <div class="itens">
       <!-- Item -->
-      <div class="item">
+      <div class="item um">
         <img src="./files/icons/pasta-dados-azul.svg">
         <div class="texto">
           <h3>Backup</h3>
@@ -221,7 +221,7 @@
         </div>
       </div>
       <!-- Item -->
-      <div class="item">
+      <div class="item dois">
         <div class="texto">
           <h3>Migração</h3>
           <p>Temos uma equipe especializada para migrar o conteúdo do seu site gratuitamente, sem perder nenhum dado.</p>
@@ -229,7 +229,7 @@
         <img src="./files/icons/dados-girando-azul.svg">
       </div>
       <!-- Item -->
-      <div class="item">
+      <div class="item tres">
         <img src="./files/icons/atendente-azul.svg">
         <div class="texto">
           <h3>Suporte</h3>
@@ -238,9 +238,7 @@
       </div>
     </div>
     <!-- Imagem -->
-    <div class="imagem">
-      <img src="./files/images/index/celular-teclado-beneficios.png">
-    </div>
+    <img class="teclado" src="./files/images/index/celular-teclado-beneficios.png">
   </section>
 
 
@@ -251,20 +249,22 @@
       <div class="quadro">
         <img class="foto" src="./files/images/index/celular-hospedagem-sites-produtos.png">
         <img class="logo" src="./files/images/logo-nuvem-hospedagem-branco.svg">
-        <h2>Hospedagem de Sites</h2>
+        <h2>Hospedagem</h2>
+        <h2>de Sites</h2>
         <p>Tudo para seu site ficar online com SSL grátis e garantir o sucesso do seu negócio na internet. Backups automáticos e um suporte incrível.</p>
         <button type="button">
           Hospedar meu Site
-          <img src="./files/icons/ok-branco.svg">
+          <img src="./files/icons/ok-azul.svg">
         </button>
       </div>
     </div>
     <!-- Parte -->
-    <div class="parte">
+    <div class="parte meio">
       <div class="quadro">
         <img class="foto" src="./files/images/index/celular-servidores-vps-produtos.png">
         <img class="logo" src="./files/images/logo-nuvem-hospedagem-branco.svg">
-        <h2>Servidores VPS</h2>
+        <h2>Servidores</h2>
+        <h2>VPS</h2>
         <p>Funcionalidades dedicadas em um ambiente totalmente escalável. Sistema operacionais Linux ou Windows.</p>
         <button type="button">
           Quero meu Servidor
@@ -277,7 +277,8 @@
       <div class="quadro">
         <img class="foto" src="./files/images/index/celular-hospedagem-wordpress-produtos.png">
         <img class="logo" src="./files/images/logo-nuvem-hospedagem-branco.svg">
-        <h2>Hospedagem Wordpress</h2>
+        <h2>Hospedagem</h2>
+        <h2>Wordpress</h2>
         <p>Conte com uma hospedagem otimizada para Wordpress, e deixe o seu site voando, com muito mais recursos.</p>
         <button type="button">
           Hospedar com Wordpress
@@ -287,7 +288,7 @@
     </div>
     <!-- Faixa -->
     <div class="faixa">
-      <div class="losango"></div>
+      <span></span>
       <p>Já possui um site em outra empresa? Venha para a Nuvem Hospedagem. Nós migramos seu site gratuitamente.</p>
     </div>
   </section>
@@ -295,39 +296,22 @@
 
   <!-- section > depoimentos -->
   <section class="depoimentos" name="depoimentos" id="depoimentos">
-    <!-- Parte -->
-    <div class="parte">
-      <div class="texto">
-        <h2>Os melhores <span>clientes da internet</span> estão aqui.</h2>
-        <p>Mais de 14.000 pessoas confiam na Nuvem para hospedar seus sites e projetos! Tudo com a mais alta e tecnológica qualidade.</p>
-      </div>
-      <div class="frase">
-        <h2>14 <span>mil</span></h2>
-        <h2>clientes</h2>
-      </div>
+    <!-- Texto -->
+    <div class="texto">
+      <h2>Os melhores <span>clientes da internet</span> estão aqui.</h2>
+      <p>Mais de 14.000 pessoas confiam na Nuvem para hospedar seus sites e projetos! Tudo com a mais alta e tecnológica qualidade.</p>
     </div>
-    <!-- Parte -->
-    <div class="parte">
-      <div class="botoes">
-        <button type="button"><img src="./files/icons/seta-inteira-esquerda-branco.svg"></button>
-        <button type="button"><img src="./files/icons/seta-inteira-direita-azul.svg"></button>
-      </div>
-      <div class="imagem">
-        <img class="telas" src="./files/images/index/notebook-celular-depoimentos.png">
-        <!-- Frase -->
-        <div class="frase">
-          <p>"Frase que o cliente falou como depoimento da NuvemHospedagem."</p>
-        </div>
-        <!-- Cliente -->
-        <div class="cliente">
-          <img src="">
-          <div class="informacao">
-            <h3>Nome do Cliente</h3>
-            <p>www.sitedocliente.com</p>
-          </div>
-        </div>
-      </div>
+    <!-- Setas -->
+    <div class="setas">
+      <button type="button" class="voltar">
+        <img src="./files/icons/seta-inteira-esquerda-branco.svg">
+      </button>
+      <button type="button" class="avancar">
+        <img src="./files/icons/seta-inteira-direita-azul.svg">
+      </button>
     </div>
+    <!-- Cliente -->
+    <img class="cliente" src="./files/images/index/celular-hospedagem-wordpress-produtos.png">
   </section>
 
 
@@ -340,19 +324,30 @@
     </div>
     <!-- Registro -->
     <div class="registro">
-      <div class="quadro">
-        <div class="informacoes">
+      <div class="informacoes">
+        <div class="input">
           <p>www.</p>
-          <input>
-          <select></select>
+          <input type="text" spellcheck="false">
         </div>
-        <!-- Botão -->
-        <button type="button">
-          Quero esse domínio
-          <img src="./files/icons/ok-escuro.svg">
-        </button>
+        <div class="select">
+          <p>.com</p>
+          <img src="./files/icons/seta-baixo-azul.svg">
+          <div class="opcoes">
+            <span>Opção 1</span>
+            <span>Opção 2</span>
+            <span>Opção 3</span>
+            <span>Opção 4</span>
+          </div>
+        </div>
       </div>
+      <!-- Botão -->
+      <button type="button">
+        Quero esse domínio
+        <img src="./files/icons/ok-escuro.svg">
+      </button>
     </div>
+    <!-- Registro -->
+    <img class="notebook" src="./files/images/index/notebook-dominio.png">
   </section>
 
 

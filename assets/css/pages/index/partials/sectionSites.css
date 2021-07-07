@@ -22,7 +22,7 @@ section.sites .texto {
   align-items: flex-start;
   justify-content: center;
   width: 60%;
-  padding: 80px;
+  padding: 150px 80px;
 }
 
 section.sites .texto h2 {
@@ -46,6 +46,8 @@ section.sites .texto p {
   line-height: 1.5;
   color: var(--cor-texto);
   padding: 20px 0;
+  width: 100%;
+  max-width: 700px;
 }
 
 /*

@@ -5,7 +5,132 @@ INDEX > SECTION.produtos
 */
 
 section.produtos {
-  display: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  background: var(--cor-secundaria-2);
+  background-image: url('../../../../../files/images/linhas-tecnologicas-icones-1.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 300px 80px 200px 80px;
+}
+
+section.produtos .parte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: var(--cor-secundaria-3);
+  position: relative;
+  border-radius: 20px;
+  padding: 50px;
+  min-height: 750px;
+}
+
+section.produtos .parte.meio {
+  margin: 0 80px;
+}
+
+section.produtos .parte img.foto {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 400px;
+  min-height: 400px;
+  max-height: 400px;
+}
+
+section.produtos .parte img.logo {
+  width: 100%;
+  max-width: 200px;
+}
+
+section.produtos .parte h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.5;
+  color: var(--cor-branco);
+  width: 100%;
+  max-width: 600px;
+}
+
+section.produtos .parte p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--cor-texto);
+  padding: 20px 0 40px 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+section.produtos .parte button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-demibold);
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  color: var(--cor-branco);
+  padding: 8px 8px 8px 25px;
+  border-radius: 50px;
+  border: 2px solid var(--cor-texto);
+  background-color: transparent;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+section.produtos .parte button img {
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+section.produtos .parte button:hover {
+  border: 2px solid var(--cor-principal);
+  color: var(--cor-principal);
+}
+
+/* Faixa */
+
+section.produtos .faixa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-principal);
+  padding: 30px;
+}
+
+section.produtos .faixa span {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  background-color: var(--cor-principal);
+  transform: rotate(45deg) translate(-50%, 0);
+  position: absolute;
+  top: 5px;
+  left: 50%;
+}
+
+section.produtos .faixa p {
+  font-family: var(--fonte-demibold);
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--cor-branco);
+  text-align: center;
 }
 
 /*
