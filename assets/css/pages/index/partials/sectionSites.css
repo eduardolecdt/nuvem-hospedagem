@@ -57,4 +57,19 @@ Responsivo
 */
 
 @media screen and (max-width: 1000px) {
+  section.sites {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  section.sites .texto {
+    width: 100%;
+    padding: 80px 25px;
+  }
+  section.sites .texto h2 img {
+    max-width: 200px;
+  }
+  section.sites .texto p {
+    padding: 20px 0 0 0;
+  }
 }

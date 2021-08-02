@@ -77,4 +77,23 @@ Responsivo
 */
 
 @media screen and (max-width: 1000px) {
+  section.servidores {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    min-height: auto;
+    padding: 250px 0 50px 25px;
+  }
+  section.servidores img.mundo {
+    position: absolute;
+    left: -20px;
+    top: -120px;
+    bottom: auto;
+    width: 120%;
+  }
+  section.servidores .quadro {
+    border-radius: 20px 0 0 20px;
+    padding: 50px 25px;
+    position: inherit;
+  }
 }

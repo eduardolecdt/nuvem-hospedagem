@@ -92,6 +92,18 @@
     })
   }
 
+  // NAV
+
+  const nav = document.querySelector('nav')
+
+  function adicionarClasseNav () {
+    window.addEventListener('scroll', () => {
+      const alturaPagina = window.scrollY
+      if (alturaPagina < 10) nav.classList.remove('scroll')
+      else nav.classList.add('scroll')
+    })
+  }
+
   // ATIVAR TUDO
 
   cliqueBotaoExterno()
@@ -99,5 +111,6 @@
   habilitarCliqueRolarAteSeletor()
   desativarDragDrop()
   ativarLazyLoading()
+  adicionarClasseNav()
 
 }())

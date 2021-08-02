@@ -183,4 +183,61 @@ Responsivo
 */
 
 @media screen and (max-width: 1000px) {
+  section.dominio {
+    flex-direction: column;
+    justify-content: center;
+  }
+  section.dominio .texto {
+    width: 100%;
+    padding: 50px 25px;
+  }
+  section.dominio .texto p {
+    padding: 20px 0 0 0;
+  }
+  section.dominio img.notebook {
+    position: initial;
+    width: 150%;
+    height: auto;
+  }
+  section.dominio .registro {
+    padding: 25px 25px 100px 25px;
+    width: 100%;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    transform: none;
+  }
+  section.dominio .registro button {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+  }
+  section.dominio .registro button img {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    min-width: 40px;
+  }
+  section.dominio .registro .informacoes .input p {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    left: 15px;
+  }
+  section.dominio .registro .informacoes .input input {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    border-radius: 10px;
+    padding: 15px 15px 15px 20px;
+  }
+  section.dominio .registro .informacoes .select {
+    border-radius: 10px;
+    padding: 18px;
+  }
+  section.dominio .registro .informacoes .select img {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    min-height: 10px;
+    margin: 0 0 0 30px;
+  }
+  section.dominio .registro .informacoes .select p {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+  }
 }

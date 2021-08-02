@@ -83,4 +83,35 @@ Responsivo
 */
 
 @media screen and (max-width: 1000px) {
+  section.beneficios {
+    flex-direction: column;
+    justify-content: center;
+  }
+  section.beneficios img.teclado {
+    right: -140px;
+    max-width: 100%;
+  }
+  section.beneficios .itens {
+    width: 100%;
+    padding: 550px 25px 100px 25px;
+  }
+  section.beneficios .itens .item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0;
+    margin: 100px 0 0 0;
+  }
+  section.beneficios .itens .item img {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  section.beneficios .itens .item .texto {
+    padding: 0 0 0 25px;
+  }
+  section.beneficios .itens .item.dois .texto {
+    padding: 0 25px 0 0;
+  }
 }

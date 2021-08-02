@@ -5,7 +5,297 @@ ELEMENTS > NAV
 */
 
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  z-index: 10;
+  padding: 50px 80px 15px 80px;
+  transition: all 0.3s;
+}
+
+nav.scroll {
+  background-color: var(--cor-secundaria-2);
+  box-shadow: 0 0 30px 0 var(--cor-secundaria-3);
+  padding: 15px 80px 15px 80px;
+}
+
+nav img.logo {
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Faixa */
+
+nav.scroll .faixa {
+  top: -40px;
+}
+
+nav .faixa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--cor-principal);
+  width: 100%;
+  padding: 5px 80px;
+  transition: all 0.3s;
+}
+
+nav .faixa button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.6rem, 5vw, 0.8rem);
+  color: var(--cor-branco);
+  transition: all 0.3s;
+}
+
+nav .faixa button img {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  pointer-events: none;
+  margin: 0 5px;
+}
+
+nav .faixa button.esquerda {
+  margin-right: auto;
+}
+
+nav .faixa button:hover {
+  opacity: 0.7;
+}
+
+/* Faixa */
+
+nav .opcoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+nav .opcoes .opcao {
+  position: relative;
+}
+
+nav .opcoes .opcao button.abrir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-demibold);
+  font-size: clamp(0.8rem, 5vw, 1rem);
+  color: var(--cor-branco);
+  background-color: transparent;
+  margin: 0 0 0 30px;
+  transition: all 0.3s;
+}
+
+nav .opcoes .opcao button.abrir img {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  pointer-events: none;
+  margin: 0 0 0 10px;
+  transition: all 0.3s;
+}
+
+nav .opcoes .opcao button.abrir:hover,
+nav .opcoes .opcao button.abrir.ativo {
+  color: var(--cor-principal);
+}
+
+nav .opcoes .opcao button.abrir:hover img,
+nav .opcoes .opcao button.abrir.ativo img {
+  transform: rotate(180deg);
+}
+
+/* Quadro */
+
+nav .opcoes .opcao .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--cor-secundaria-1);
+  box-shadow: -10px 10px 40px 0 var(--cor-secundaria-3);
+  padding: 30px 30px 0 30px;
+  min-width: 350px;
+  border-radius: 15px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+nav .opcoes .opcao .quadro.mostrar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  top: 45px;
+}
+
+nav .opcoes .opcao .quadro button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  background-color: transparent;
+  padding: 0 0 0 50px;
+  text-align: left;
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+
+nav .opcoes .opcao .quadro button h3 {
+  font-family: var(--fonte-demibold);
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+
+nav .opcoes .opcao .quadro button p {
+  font-family: var(--fonte-light);
+  font-size: clamp(0.9rem, 5vw, 1rem);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+
+nav .opcoes .opcao .quadro button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  pointer-events: none;
+}
+
+nav .opcoes .opcao .quadro button:hover h3,
+nav .opcoes .opcao .quadro button:hover p {
+  color: var(--cor-principal);
+}
+
+/* Botões */
+
+nav .opcoes .botoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+nav .opcoes .botoes button.criar {
+  font-family: var(--fonte-demibold);
+  font-size: clamp(0.8rem, 5vw, 1rem);
+  color: var(--cor-branco);
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+nav .opcoes .botoes button.criar:hover {
+  color: var(--cor-principal);
+}
+
+nav .opcoes .botoes button.entrar {
+  font-family: var(--fonte-demibold);
+  font-size: clamp(0.8rem, 5vw, 1rem);
+  color: var(--cor-principal);
+  background-color: var(--cor-secundaria-1);
+  border: 2px solid var(--cor-principal);
+  padding: 12px 25px;
+  border-radius: 50px;
+  margin: 0 0 0 30px;
+  transition: all 0.3s;
+}
+
+nav .opcoes .botoes button.entrar:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-branco);
+}
+
+/* Mobile */
+
+nav .mobile {
   display: none;
+}
+
+nav .mobile button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: transparent;
+  width: 40px;
+  height: 20px;
+  min-width: 40px;
+  min-height: 20px;
+  position: relative;
+}
+nav .mobile button .maior {
+  width: 40px;
+  height: 5px;
+  min-width: 40px;
+  min-height: 5px;
+  border-radius: 40px;
+  background-color: var(--cor-branco);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+nav .mobile button .menor {
+  width: 20px;
+  height: 5px;
+  min-width: 20px;
+  min-height: 5px;
+  border-radius: 40px;
+  background-color: var(--cor-branco);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+nav .mobile button.ativo {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+nav .mobile button.ativo .maior {
+  width: 40px;
+  height: 5px;
+  min-width: 40px;
+  min-height: 5px;
+  top: 50%;
+  right: 0;
+  transform: rotate(-45deg);
+}
+nav .mobile button.ativo .menor {
+  width: 40px;
+  height: 5px;
+  min-width: 40px;
+  min-height: 5px;
+  top: 50%;
+  right: 0;
+  transform: rotate(45deg);
 }
 
 /*
@@ -15,4 +305,64 @@ Responsivo
 */
 
 @media screen and (max-width: 1000px) {
+  nav {
+    padding: 15px 25px;
+  }
+  nav.scroll {
+    padding: 15px 25px;
+  }
+  nav img.logo {
+    max-width: 200px;
+    margin-right: auto;
+  }
+  nav .faixa {
+    display: none;
+  }
+  nav .mobile {
+    display: flex;
+  }
+  nav .opcoes {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+    background-color: var(--cor-secundaria-2);
+    position: fixed;
+    top: 57px;
+    left: 0;
+    overflow-y: scroll;
+    padding: 0 25px 200px 25px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  nav .opcoes.mostrar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  nav .opcoes .opcao button.abrir {
+    margin: 40px 0 15px 0;
+    pointer-events: none;
+  }
+  nav .opcoes .opcao button.abrir img {
+    display: none;
+  }
+  nav .opcoes .opcao .quadro {
+    padding: 25px 25px 0 25px;
+    min-width: 300px;
+    width: 100%;
+    position: initial;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  nav .opcoes .opcao .quadro button {
+    margin: 0 0 25px 0;
+  }
+  nav .opcoes .botoes {
+    padding: 30px 0 0 0;
+  }
 }

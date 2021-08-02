@@ -23,7 +23,7 @@ header .texto {
   align-items: flex-start;
   justify-content: center;
   width: 50%;
-  padding: 150px 80px;
+  padding: 200px 80px 150px 80px;
   min-height: 90vh;
 }
 
@@ -84,7 +84,7 @@ header .texto button:hover {
 
 header img.notebook {
   position: absolute;
-  width: 60%;
+  width: 55%;
   right: 80px;
   bottom: -30%;
 }
@@ -96,4 +96,25 @@ Responsivo
 */
 
 @media screen and (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 0 30px 0;
+  }
+  header .texto {
+    width: 100%;
+    padding: 150px 25px 50px 25px;
+    min-height: auto;
+  }
+  header .texto button img {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    min-width: 40px;
+  }
+  header img.notebook {
+    position: inherit;
+    width: 140%;
+  }
 }
