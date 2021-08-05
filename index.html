@@ -74,17 +74,17 @@
     <!-- Faixa -->
     <div class="faixa">
       <!-- Whatsapp -->
-      <button type="button" class="esquerda">
+      <button type="button" class="esquerda" data-url="https://wa.me/5518991390470">
         Precisa de ajuda? Clique aqui e fale com nosso time no WhatsApp.
         <img src="./files/icons/whatsapp-branco.svg">
       </button>
       <!-- Youtube -->
-      <button type="button">
+      <button type="button" data-url="https://www.youtube.com/channel/UC87MyeEJxkLEk5X3RmmQ3ug">
         <img src="./files/icons/youtube-branco.svg">
         Canal no Youtube
       </button>
       <!-- Instagram -->
-      <button type="button">
+      <button type="button" data-url="instagram.com/nuvemhospedagem">
         <img src="./files/icons/instagram-branco.svg">
         Perfil no Instagram
       </button>
@@ -93,7 +93,7 @@
     <img class="logo" src="./files/images/logo-nuvem-hospedagem-branco.svg">
     <!-- Menu Mobile -->
     <div class="mobile">
-      <button type="button">
+      <button type="button" name="abrirMenuMobile">
         <div class="maior"></div>
         <div class="menor"></div>
       </button>
@@ -102,20 +102,20 @@
     <div class="opcoes">
       <!-- Opção -->
       <div class="opcao">
-        <button type="button" class="abrir">Hospedagem<img src="./files/icons/seta-baixo-azul.svg"></button>
+        <button type="button" class="abrir" name="abrirHospedagemOpcoes">Hospedagem<img src="./files/icons/seta-baixo-azul.svg"></button>
         <!-- Quadro da Opção -->
         <div class="quadro">
-          <button type="button">
+          <button type="button" data-pagina="/hospedagem-wordpress">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>Hospedagem Wordpress</h3>
             <p>Hospede seu site wordpress nos servidores 100% SSD da Nuvem.</p>
           </button>
-          <button type="button">
+          <button type="button" data-pagina="/hospedagem-vps">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>Servidores VPS</h3>
             <p>Precisa de algo mais escalável e robusto? Nossos servidores VPS são perfeito para você.</p>
           </button>
-          <button type="button">
+          <button type="button" data-pagina="/hospedagem-de-sites">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>Hospedagem SSD</h3>
             <p>Hospede seus sites em HTML ou PHP nos servidores 100% SSD da Nuvem.</p>
@@ -124,25 +124,25 @@
       </div>
       <!-- Opção -->
       <div class="opcao">
-        <button type="button" class="abrir">Serviços<img src="./files/icons/seta-baixo-azul.svg"></button>
+        <button type="button" class="abrir" name="abrirServicosOpcoes">Serviços<img src="./files/icons/seta-baixo-azul.svg"></button>
         <!-- Quadro da Opção -->
         <div class="quadro">
-          <button type="button">
+          <button type="button" data-pagina="/email-profissional">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>E-mail Profissional</h3>
             <p>Tenha um e-mail profissional para sua empresa ou projeto. Ex: email@suaempresa.com</p>
           </button>
-          <button type="button">
+          <button type="button" data-pagina="/crie-blog">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>Criador de Blogs</h3>
             <p>Crie um blog 100% personalizado com o criador de blogs da Nuvem.</p>
           </button>
-          <button type="button">
+          <button type="button" data-pagina="/registro-de-dominio">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>Registro um Domínio</h3>
             <p>Registre seu domínio .com, .com.br, .net ou a extensão que mais combinar com sua ideia.</p>
           </button>
-          <button type="button">
+          <button type="button" data-pagina="/certificado-ssl">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>Certificado SSL</h3>
             <p>Tenha o cadeado verde em seu projeto com o certificado SSL da Nuvem.</p>
@@ -151,15 +151,15 @@
       </div>
       <!-- Opção -->
       <div class="opcao">
-        <button type="button" class="abrir">Dúvidas<img src="./files/icons/seta-baixo-azul.svg"></button>
+        <button type="button" class="abrir" name="abrirDuvidasOpcoes">Dúvidas<img src="./files/icons/seta-baixo-azul.svg"></button>
         <!-- Quadro da Opção -->
         <div class="quadro">
-          <button type="button">
+          <button type="button" data-pagina="/sobre">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>Sobre a Nuvem</h3>
             <p>Conheça mais sobre a Nuvem, uma empresa com mais de 10 anos de história.</p>
           </button>
-          <button type="button">
+          <button type="button" data-pagina="/fale-conosco">
             <img src="./files/icons/seta-baixo-azul.svg">
             <h3>Falar com Suporte</h3>
             <p>Precisa de ajuda? Chame nosso time de suporte que iremos te ajudar no que for necessário.</p>
@@ -168,9 +168,69 @@
       </div>
       <!-- Botões -->
       <div class="botoes">
-        <button type="button" class="criar">Criar Conta</button>
-        <button type="button" class="entrar">Já sou Cliente</button>
+        <button type="button" class="criar" data-url="https://cliente.nuvemhospedagem.com.br/index.php?rp=/login">Criar Conta</button>
+        <button type="button" class="entrar" data-url="https://cliente.nuvemhospedagem.com.br/register.php">Já sou Cliente</button>
       </div>
+    </div>
+    <!-- Opções MOBILE -->
+    <div class="opcoesMobile" name="opcoesNav">
+      <!-- Botões -->
+      <div class="botoes">
+        <button type="button" class="criar" data-url="https://cliente.nuvemhospedagem.com.br/index.php?rp=/login">Criar Conta</button>
+        <button type="button" class="entrar" data-url="https://cliente.nuvemhospedagem.com.br/register.php">Já sou Cliente</button>
+      </div>
+      <!-- Opção -->
+      <h4>Hospedagem<img src="./files/icons/seta-baixo-branco.svg"></h4>
+      <button class="opcao" type="button" data-pagina="/hospedagem-wordpress">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>Hospedagem Wordpress</h3>
+        <p>Hospede seu site wordpress nos servidores 100% SSD da Nuvem.</p>
+      </button>
+      <button class="opcao" type="button" data-pagina="/hospedagem-vps">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>Servidores VPS</h3>
+        <p>Precisa de algo mais escalável e robusto? Nossos servidores VPS são perfeito para você.</p>
+      </button>
+      <button class="opcao" type="button" data-pagina="/hospedagem-de-sites">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>Hospedagem SSD</h3>
+        <p>Hospede seus sites em HTML ou PHP nos servidores 100% SSD da Nuvem.</p>
+      </button>
+      <!-- Parte -->
+      <h4>Serviços<img src="./files/icons/seta-baixo-branco.svg"></h4>
+      <!-- Quadro da Opção -->
+      <button class="opcao" type="button" data-pagina="/email-profissional">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>E-mail Profissional</h3>
+        <p>Tenha um e-mail profissional para sua empresa ou projeto. Ex: email@suaempresa.com</p>
+      </button>
+      <button class="opcao" type="button" data-pagina="/crie-blog">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>Criador de Blogs</h3>
+        <p>Crie um blog 100% personalizado com o criador de blogs da Nuvem.</p>
+      </button>
+      <button class="opcao" type="button" data-pagina="/registro-de-dominio">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>Registro um Domínio</h3>
+        <p>Registre seu domínio .com, .com.br, .net ou a extensão que mais combinar com sua ideia.</p>
+      </button>
+      <button class="opcao" type="button" data-pagina="/certificado-ssl">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>Certificado SSL</h3>
+        <p>Tenha o cadeado verde em seu projeto com o certificado SSL da Nuvem.</p>
+      </button>
+      <!-- Parte -->
+      <h4>Dúvidas<img src="./files/icons/seta-baixo-branco.svg"></h4>
+      <button class="opcao" type="button" data-pagina="/sobre">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>Sobre a Nuvem</h3>
+        <p>Conheça mais sobre a Nuvem, uma empresa com mais de 10 anos de história.</p>
+      </button>
+      <button class="opcao" type="button" data-pagina="/fale-conosco">
+        <img src="./files/icons/seta-baixo-azul.svg">
+        <h3>Falar com Suporte</h3>
+        <p>Precisa de ajuda? Chame nosso time de suporte que iremos te ajudar no que for necessário.</p>
+      </button>
     </div>
   </nav>
 
@@ -181,8 +241,8 @@
     <div class="texto">
       <h1>Um lugar seguro, rápido, e tecnológico para você hospedar seu website.</h1>
       <p>Nós somos a nuvem<span>Hospedagem</span>, desde 2004 colocando os melhores sites nos melhores servidores da internet.</p>
-      <button type="button">
-        Criar minha Conta
+      <button type="button" data-pagina="/hospedagem-de-sites">
+        Hospedar meu Site
         <img src="./files/icons/ok-azul.svg">
       </button>
     </div>
@@ -257,7 +317,7 @@
         <h2>Hospedagem</h2>
         <h2>de Sites</h2>
         <p>Tudo para seu site ficar online com SSL grátis e garantir o sucesso do seu negócio na internet. Backups automáticos e um suporte incrível.</p>
-        <button type="button">
+        <button type="button" data-pagina="/hospedagem-de-sites">
           Hospedar meu Site
           <img src="./files/icons/ok-azul.svg">
         </button>
@@ -271,7 +331,7 @@
         <h2>Servidores</h2>
         <h2>VPS</h2>
         <p>Funcionalidades dedicadas em um ambiente totalmente escalável. Sistema operacionais Linux ou Windows.</p>
-        <button type="button">
+        <button type="button" data-pagina="/hospedagem-vps">
           Quero meu Servidor
           <img src="./files/icons/ok-azul.svg">
         </button>
@@ -285,7 +345,7 @@
         <h2>Hospedagem</h2>
         <h2>Wordpress</h2>
         <p>Conte com uma hospedagem otimizada para Wordpress, e deixe o seu site voando, com muito mais recursos.</p>
-        <button type="button">
+        <button type="button" data-pagina="/hospedagem-wordpress">
           Hospedar com Wordpress
           <img src="./files/icons/ok-azul.svg">
         </button>

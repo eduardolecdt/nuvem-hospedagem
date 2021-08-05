@@ -3,8 +3,9 @@
   // Variables
 
   const nav = document.querySelector('nav')
+  const opcoesNav = nav.querySelector('div[name="opcoesNav"]')
 
-  // Methods
+  // ADICIONAR CLASSE AO SCROLLAR
 
   function adicionarClasse () {
     window.addEventListener('scroll', () => {
@@ -13,7 +14,6 @@
       else nav.classList.add('scroll')
     })
   }
-
 
   // Start
   adicionarClasse()
