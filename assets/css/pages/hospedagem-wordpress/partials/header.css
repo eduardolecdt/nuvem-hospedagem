@@ -1,11 +1,92 @@
 /*
 
-HOSPEDAGEM WORDPRESS > HEADER
+HOSPEDAGEM WORDRESS > HEADER
 
 */
 
 header {
-  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background-image: url('../../../../../files/images/linhas-tecnologicas-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Texto */
+
+header .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  padding: 200px 80px 150px 80px;
+  min-height: 90vh;
+}
+
+header .texto h1 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.5;
+  color: var(--cor-branco);
+  width: 100%;
+  max-width: 600px;
+}
+
+header .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--cor-texto);
+  padding: 20px 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+header .texto p span {
+  font-family: var(--fonte-demibold);
+}
+
+header .texto button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-demibold);
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--cor-branco);
+  padding: 8px 8px 8px 25px;
+  border-radius: 50px;
+  border: 2px solid var(--cor-texto);
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+header .texto button img {
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  margin: 0 0 0 15px;
+}
+
+header .texto button:hover {
+  border: 2px solid var(--cor-principal);
+  color: var(--cor-principal);
+}
+
+/* Imagem */
+
+header img.notebook {
+  position: absolute;
+  width: 55%;
+  right: 80px;
+  bottom: -30%;
 }
 
 /*
@@ -15,4 +96,25 @@ Responsivo
 */
 
 @media screen and (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 0 30px 0;
+  }
+  header .texto {
+    width: 100%;
+    padding: 150px 25px 50px 25px;
+    min-height: auto;
+  }
+  header .texto button img {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    min-width: 40px;
+  }
+  header img.notebook {
+    position: inherit;
+    width: 140%;
+  }
 }

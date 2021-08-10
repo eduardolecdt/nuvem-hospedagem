@@ -1,11 +1,18 @@
 /*
 
-HOSPEDAGEM VPS
+INDEX
 
 */
 
 @import '../../global/global.css';
 
+/* Elements */
+
+@import '../../elements/nav.css';
+@import '../../elements/footer.css';
+
 /* Partials */
 
 @import './partials/header.css';
+@import './partials/sectionDepoimentos.css';
+@import './partials/sectionDominio.css';
