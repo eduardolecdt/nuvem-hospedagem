@@ -21,7 +21,7 @@ footer img {
 
 footer p {
   font-family: var(--fonte-light);
-  font-size: clamp(1rem, 5vw, 1.3rem);
+  font-size: clamp(1rem, 3vw, 1.3rem);
   line-height: 1.5;
   color: var(--cor-texto);
   padding: 20px 0 0 0;

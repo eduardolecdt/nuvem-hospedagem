@@ -9,8 +9,8 @@ section.depoimentos {
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  background: var(--cor-secundaria-3);
-  background-image: url('../../../../../files/images/linhas-tecnologicas-2.png');
+  background: var(--cor-secundaria-2);
+  background-image: url('../../../../../files/images/linhas-tecnologicas-1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@ section.depoimentos .texto {
 
 section.depoimentos .texto h2 {
   font-family: var(--fonte-bold);
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
   line-height: 1.5;
   color: var(--cor-branco);
   width: 100%;
@@ -42,7 +42,7 @@ section.depoimentos .texto h2 span {
 
 section.depoimentos .texto p {
   font-family: var(--fonte-light);
-  font-size: clamp(1rem, 5vw, 1.3rem);
+  font-size: clamp(1rem, 3vw, 1.3rem);
   line-height: 1.5;
   color: var(--cor-texto);
   padding: 20px 0 0 0;

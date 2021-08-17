@@ -14,5 +14,8 @@ INDEX
 /* Partials */
 
 @import './partials/header.css';
+@import './partials/sectionSites.css';
+@import './partials/sectionBeneficios.css';
+@import './partials/sectionPlanos.css';
 @import './partials/sectionDepoimentos.css';
 @import './partials/sectionDominio.css';

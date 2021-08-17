@@ -54,7 +54,7 @@ section.servidores .quadro {
 
 section.servidores .quadro h2 {
   font-family: var(--fonte-bold);
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
   color: var(--cor-branco);
 }
 
@@ -64,7 +64,7 @@ section.servidores .quadro h2 span {
 
 section.servidores .quadro p {
   font-family: var(--fonte-light);
-  font-size: clamp(1rem, 5vw, 1.3rem);
+  font-size: clamp(1rem, 3vw, 1.3rem);
   line-height: 1.5;
   color: var(--cor-texto);
   padding: 20px 0 0 0;
