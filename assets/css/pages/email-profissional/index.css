@@ -1,7 +1,18 @@
-/* E-mail profissional */
+/* E-mail Profissional */
 
 @import '../../global/global.css';
 
+/* Elements */
+
+@import '../../elements/nav.css';
+@import '../../elements/footer.css';
+
 /* Partials */
 
-@import './partials/header.css';
+@import './partials/section-apresentacao.css';
+@import './partials/section-depoimento.css';
+@import './partials/section-dominio.css';
+@import './partials/section-duvidas.css';
+@import './partials/section-painel.css';
+@import './partials/section-planos.css';
+@import './partials/section-qualidades.css';

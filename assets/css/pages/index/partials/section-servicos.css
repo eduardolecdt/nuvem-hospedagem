@@ -1,0 +1,12 @@
+/* <section class="servicos"> */
+
+section.servicos {
+  display: none;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  
+}
+  

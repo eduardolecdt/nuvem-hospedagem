@@ -2,6 +2,18 @@
 
 @import '../../global/global.css';
 
+/* Elements */
+
+@import '../../elements/nav.css';
+@import '../../elements/footer.css';
+
 /* Partials */
 
-@import './partials/header.css';
+@import './partials/section-apresentacao.css';
+@import './partials/section-contato.css';
+@import './partials/section-depoimento.css';
+@import './partials/section-dominio.css';
+@import './partials/section-duvidas.css';
+@import './partials/section-informacao.css';
+@import './partials/section-qualidades.css';
+@import './partials/section-servidor.css';
