@@ -1,0 +1,12 @@
+/* <section class="planos"> */
+
+section.planos {
+  display: none;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  
+}
+  
