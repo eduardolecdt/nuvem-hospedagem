@@ -3,11 +3,13 @@
 :root {
 
   --cor-branco: #FFFFFF;
+  --cor-branco-t1: rgb(255, 255, 255, 0.1);
   --cor-preto: #000000;
 
   --cor-texto: #C1C6D1;
 
   --cor-principal: #2EC9D4;
+  --cor-principal-t1: rgb(46, 201, 212, 0.1);
 
   --cor-secundaria-1: #1B3D57;
   --cor-secundaria-2: #132D41;

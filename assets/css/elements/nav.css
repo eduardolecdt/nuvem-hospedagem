@@ -7,250 +7,226 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: transparent;
   width: 100%;
   z-index: 10;
-  padding: 50px 80px 15px 80px;
+  padding: 20px 80px;
   transition: all 0.3s;
+  z-index: 5;
 }
 
 nav.scroll {
-  background-color: var(--cor-secundaria-2);
-  box-shadow: 0 0 30px 0 var(--cor-secundaria-3);
-  padding: 15px 80px 15px 80px;
+  background-color: var(--cor-secundaria-3);
+  box-shadow: 0 0 30px 0 var(--cor-secundaria-2);
 }
 
 nav img.logo {
   width: 100%;
-  max-width: 250px;
+  max-width: 200px;
 }
 
-/* Faixa */
+/* Button Abrir */
 
-nav.scroll .faixa {
-  top: -40px;
-}
-
-nav .faixa {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--cor-principal);
-  width: 100%;
-  padding: 5px 80px;
-  transition: all 0.3s;
-}
-
-nav .faixa button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
+nav button.abrir {
   font-family: var(--fonte-bold);
-  font-size: clamp(0.6rem, 3vw, 0.8rem);
-  color: var(--cor-branco);
-  transition: all 0.3s;
-}
-
-nav .faixa button img {
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  min-height: 20px;
-  pointer-events: none;
-  margin: 0 5px;
-}
-
-nav .faixa button.esquerda {
-  margin-right: auto;
-}
-
-nav .faixa button:hover {
-  opacity: 0.7;
-}
-
-/* Faixa */
-
-nav .opcoes {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-nav .opcoes .opcao {
-  position: relative;
-}
-
-nav .opcoes .opcao button.abrir {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--fonte-demibold);
   font-size: clamp(0.8rem, 3vw, 1rem);
   color: var(--cor-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 50px;
   transition: all 0.3s;
 }
 
-nav .opcoes .opcao button.abrir img {
-  width: 15px;
-  height: 15px;
-  min-width: 15px;
-  min-height: 15px;
-  pointer-events: none;
+nav button.abrir img {
+  width: 100%;
+  max-width: 15px;
   margin: 0 0 0 10px;
   transition: all 0.3s;
+  pointer-events: none;
 }
 
-nav .opcoes .opcao button.abrir:hover,
-nav .opcoes .opcao button.abrir.ativo {
+nav button.abrir:hover {
   color: var(--cor-principal);
 }
 
-nav .opcoes .opcao button.abrir:hover img,
-nav .opcoes .opcao button.abrir.ativo img {
-  transform: rotate(180deg);
+nav button.abrir:hover img {
+  transform: scale(0.6);
+}
+
+/* Button Entrar e Criar */
+
+nav button.entrar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-principal-t1);
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--cor-principal);
+  transition: all 0.3s;
+  margin: 0 0 0 30px;
+}
+
+nav button.entrar:hover {
+  color: var(--cor-branco);
+  background-color: var(--cor-branco-t1);
+  border: 2px solid var(--cor-branco);
+}
+
+nav button.registrar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-branco);
+  background-color: transparent;
+  margin-left: auto;
+  transition: all 0.3s;
+}
+
+nav button.registrar:hover {
+  color: var(--cor-principal);
 }
 
 /* Quadro */
 
-nav .opcoes .opcao .quadro {
+nav .quadro {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-color: var(--cor-secundaria-1);
-  box-shadow: -10px 10px 40px 0 var(--cor-secundaria-3);
-  padding: 30px 30px 0 30px;
-  min-width: 350px;
-  border-radius: 15px;
-  position: absolute;
-  top: 35px;
-  left: 0;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: var(--cor-secundaria-3);
+  box-shadow: 0 0 30px 0 var(--cor-secundaria-2);
+  position: fixed;
+  top: 100px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: scale(0.9);
   transition: all 0.3s;
 }
 
-nav .opcoes .opcao .quadro.mostrar {
+nav .quadro.mostrar {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  top: 45px;
+  transform: scale(1);
 }
 
-nav .opcoes .opcao .quadro button {
+nav .quadro .losango {
+  border-top: 20px solid var(--cor-secundaria-3);
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  transform: rotate(180deg);
+  position: fixed;
+  top: -30px;
+  left: 30px;
+}
+
+nav .quadro.hospedagem {
+  left: 330px;
+}
+
+nav .quadro.servicos {
+  left: 480px;
+}
+
+nav .quadro.suporte {
+  left: 610px;
+}
+
+nav .quadro button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  position: relative;
   background-color: transparent;
-  padding: 0 0 0 50px;
+  position: relative;
+  padding: 0 0 0 60px;
   text-align: left;
-  width: 100%;
-  margin: 0 0 30px 0;
+  margin: 15px 0;
 }
 
-nav .opcoes .opcao .quadro button h3 {
-  font-family: var(--fonte-demibold);
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  color: var(--cor-branco);
-  line-height: 1.5;
-  transition: all 0.3s;
-}
-
-nav .opcoes .opcao .quadro button p {
-  font-family: var(--fonte-light);
-  font-size: clamp(0.9rem, 3vw, 1rem);
-  color: var(--cor-texto);
-  line-height: 1.5;
-  transition: all 0.3s;
-}
-
-nav .opcoes .opcao .quadro button img {
+nav .quadro button img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
+  width: 100%;
+  max-width: 50px;
+  transition: all 0.3s;
   pointer-events: none;
 }
 
-nav .opcoes .opcao .quadro button:hover h3,
-nav .opcoes .opcao .quadro button:hover p {
-  color: var(--cor-principal);
-}
-
-/* Botões */
-
-nav .opcoes .botoes {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-}
-
-nav .opcoes .botoes button.criar {
-  font-family: var(--fonte-demibold);
+nav .quadro button h3 {
+  font-family: var(--fonte-bold);
   font-size: clamp(0.8rem, 3vw, 1rem);
   color: var(--cor-branco);
-  background-color: transparent;
+  padding: 0 0 5px 0;
   transition: all 0.3s;
+  pointer-events: none;
 }
 
-nav .opcoes .botoes button.criar:hover {
-  color: var(--cor-principal);
-}
-
-nav .opcoes .botoes button.entrar {
-  font-family: var(--fonte-demibold);
+nav .quadro button p {
+  font-family: var(--fonte-light);
   font-size: clamp(0.8rem, 3vw, 1rem);
-  color: var(--cor-principal);
-  background-color: var(--cor-secundaria-1);
-  border: 2px solid var(--cor-principal);
-  padding: 12px 25px;
-  border-radius: 50px;
-  margin: 0 0 0 30px;
+  color: var(--cor-texto);
+  line-height: 1.6;
   transition: all 0.3s;
+  pointer-events: none;
 }
 
-nav .opcoes .botoes button.entrar:hover {
-  background-color: var(--cor-principal);
-  color: var(--cor-branco);
+nav .quadro button:hover img {
+  animation: imgNav 1s linear infinite;
 }
 
-/* Mobile */
+nav .quadro button:hover h3 {
+  color: var(--cor-principal);
+}
 
-nav .mobile {
+nav .quadro button:hover p {
+  color: var(--cor-principal);
+}
+
+@keyframes imgNav {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Menu */
+
+nav button.menu {
   display: none;
-}
-
-nav .mobile button {
-  display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   background-color: transparent;
-  width: 40px;
-  height: 20px;
-  min-width: 40px;
-  min-height: 20px;
+  width: 30px;
+  height: 15px;
+  min-width: 30px;
+  min-height: 15px;
   position: relative;
   transition: all 0.3s;
+  margin-left: auto;
 }
-nav .mobile button .maior {
-  width: 40px;
-  height: 5px;
-  min-width: 40px;
-  min-height: 5px;
+
+nav button.menu .maior {
+  width: 30px;
+  height: 4px;
+  min-width: 30px;
+  min-height: 4px;
   border-radius: 40px;
   background-color: var(--cor-branco);
   position: absolute;
@@ -259,11 +235,12 @@ nav .mobile button .maior {
   transition: all 0.3s;
   pointer-events: none;
 }
-nav .mobile button .menor {
+
+nav button.menu .menor {
   width: 20px;
-  height: 5px;
+  height: 4px;
   min-width: 20px;
-  min-height: 5px;
+  min-height: 4px;
   border-radius: 40px;
   background-color: var(--cor-branco);
   position: absolute;
@@ -272,200 +249,282 @@ nav .mobile button .menor {
   transition: all 0.3s;
   pointer-events: none;
 }
-nav .mobile button.ativo {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
+
+nav button.menu.ativo {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
 }
-nav .mobile button.ativo .maior {
-  width: 40px;
-  height: 5px;
-  min-width: 40px;
-  min-height: 5px;
+
+nav button.menu.ativo .maior {
   top: 50%;
   right: 0;
   transform: rotate(-45deg);
 }
-nav .mobile button.ativo .menor {
-  width: 40px;
-  height: 5px;
-  min-width: 40px;
-  min-height: 5px;
+
+nav button.menu.ativo .menor {
+  width: 30px;
+  min-width: 30px;
   top: 50%;
   right: 0;
   transform: rotate(45deg);
 }
 
-nav .mobile button:hover {
-  opacity: 0.7;
+nav button.menu:hover div {
+  background-color: var(--cor-principal);
 }
 
-/* Opções Mobile */
+/* Mobile */
 
-nav .opcoesMobile {
-  flex-direction: column-reverse;
+nav .mobile {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
   height: 100vh;
   max-height: 100vh;
   min-height: 100vh;
-  background-color: var(--cor-secundaria-2);
-  position: fixed;
-  top: 57px;
-  left: 0;
   overflow-y: scroll;
-  padding: 0 25px 200px 25px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  padding: 30px 30px 250px 30px;
+  background-color: var(--cor-secundaria-3);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: all 0.3s;
+  top: 0;
 }
 
-nav .opcoesMobile.mostrar {
+nav .mobile.mostrar {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+  top: 65px;
 }
 
-nav .opcoesMobile h4 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-family: var(--fonte-demibold);
-  font-size: clamp(0.8rem, 3vw, 1rem);
-  color: var(--cor-branco);
-  margin: 40px 0 20px 0;
-  transition: all 0.3s;
-  text-align: left;
-  width: 100%;
-}
-
-nav .opcoesMobile h4 img {
-  width: 15px;
-  height: 15px;
-  min-width: 15px;
-  min-height: 15px;
-  pointer-events: none;
-  margin: 0 0 0 10px;
-  transition: all 0.3s;
-}
-
-nav .opcoesMobile .opcao .quadro {
-  padding: 25px 25px 0 25px;
-  min-width: 300px;
-  width: 100%;
-  position: initial;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
-nav .opcoesMobile button.opcao {
+nav .mobile button.opcao {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  position: relative;
   background-color: transparent;
-  padding: 0 0 0 50px;
+  position: relative;
+  padding: 0 0 0 60px;
   text-align: left;
-  width: 100%;
-  margin: 0 0 25px 0;
+  margin: 15px 0;
 }
 
-nav .opcoesMobile button.opcao h3 {
-  font-family: var(--fonte-demibold);
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  color: var(--cor-branco);
-  line-height: 1.5;
-  transition: all 0.3s;
-}
-
-nav .opcoesMobile button.opcao p {
-  font-family: var(--fonte-light);
-  font-size: clamp(0.9rem, 3vw, 1rem);
-  color: var(--cor-texto);
-  line-height: 1.5;
-  transition: all 0.3s;
-}
-
-nav .opcoesMobile button.opcao img {
+nav .mobile button.opcao img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
+  width: 100%;
+  max-width: 50px;
+  transition: all 0.3s;
   pointer-events: none;
 }
 
-nav .opcoesMobile button.opcao:hover h3,
-nav .opcoesMobile button.opcao:hover p {
-  color: var(--cor-principal);
-}
-
-nav .opcoesMobile .botoes {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-left: auto;
-  padding: 30px 0 0 0;
-}
-
-nav .opcoesMobile .botoes button.criar {
-  font-family: var(--fonte-demibold);
+nav .mobile button.opcao h3 {
+  font-family: var(--fonte-bold);
   font-size: clamp(0.8rem, 3vw, 1rem);
   color: var(--cor-branco);
-  background-color: transparent;
+  padding: 0 0 5px 0;
   transition: all 0.3s;
+  pointer-events: none;
 }
 
-nav .opcoesMobile .botoes button.criar:hover {
+nav .mobile button.opcao p {
+  font-family: var(--fonte-light);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav .mobile button.opcao:hover h3 {
   color: var(--cor-principal);
 }
 
-nav .opcoesMobile .botoes button.entrar {
-  font-family: var(--fonte-demibold);
+nav .mobile button.opcao:hover p {
+  color: var(--cor-principal);
+}
+
+nav .mobile button.logar {
+  font-family: var(--fonte-bold);
   font-size: clamp(0.8rem, 3vw, 1rem);
   color: var(--cor-principal);
-  background-color: var(--cor-secundaria-1);
+  background-color: var(--cor-principal-t1);
+  padding: 10px 20px;
+  border-radius: 100px;
   border: 2px solid var(--cor-principal);
-  padding: 12px 25px;
-  border-radius: 50px;
-  margin: 0 0 0 30px;
+  transition: all 0.3s;
+  margin: 15px 0 20px 0;
+}
+
+nav .mobile button.logar:hover {
+  color: var(--cor-branco);
+  background-color: var(--cor-branco-t1);
+  border: 2px solid var(--cor-branco);
+}
+
+nav .mobile button.criar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-branco);
+  background-color: var(--cor-branco-t1);
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--cor-branco);
   transition: all 0.3s;
 }
 
-nav .opcoesMobile .botoes button.entrar:hover {
-  background-color: var(--cor-principal);
+nav .mobile button.criar:hover {
   color: var(--cor-branco);
+  background-color: var(--cor-branco-t1);
+  border: 2px solid var(--cor-branco);
 }
 
-/*
-
-Responsivo
-
-*/
+/* Responsivo */
 
 @media screen and (max-width: 1000px) {
   nav {
-    padding: 15px 25px;
-  }
-  nav.scroll {
-    padding: 15px 25px;
+    padding: 20px 20px;
   }
   nav img.logo {
-    max-width: 200px;
-    margin-right: auto;
+    width: 100%;
+    max-width: 180px;
   }
-  nav .faixa {
+  nav button.abrir {
     display: none;
   }
-  nav .opcoes {
+  nav button.entrar {
     display: none;
   }
-  nav .mobile {
+  nav button.registrar {
+    display: none;
+  }
+  nav button.menu {
     display: flex;
+  }
+  
+  /* Quadro */
+  
+  nav .quadro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: var(--cor-secundaria-3);
+    box-shadow: 0 0 30px 0 var(--cor-secundaria-2);
+    position: fixed;
+    top: 100px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.9);
+    transition: all 0.3s;
+  }
+  
+  nav .quadro.mostrar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: scale(1);
+  }
+  
+  nav .quadro .losango {
+    border-top: 20px solid var(--cor-secundaria-3);
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    transform: rotate(180deg);
+    position: fixed;
+    top: -30px;
+    left: 30px;
+  }
+  
+  nav .quadro.hospedagem {
+    left: 330px;
+  }
+  
+  nav .quadro.servicos {
+    left: 480px;
+  }
+  
+  nav .quadro.suporte {
+    left: 610px;
+  }
+  
+  nav .quadro button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+    padding: 0 0 0 60px;
+    text-align: left;
+    margin: 15px 0;
+  }
+  
+  nav .quadro button img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 50px;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  
+  nav .quadro button h3 {
+    font-family: var(--fonte-bold);
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    color: var(--cor-branco);
+    padding: 0 0 5px 0;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  
+  nav .quadro button p {
+    font-family: var(--fonte-light);
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  
+  nav .quadro button:hover img {
+    animation: imgNav 1s linear infinite;
+  }
+  
+  nav .quadro button:hover h3 {
+    color: var(--cor-principal);
+  }
+  
+  nav .quadro button:hover p {
+    color: var(--cor-principal);
+  }
+  
+  @keyframes imgNav {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
