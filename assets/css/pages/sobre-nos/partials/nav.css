@@ -1,0 +1,527 @@
+/* <nav> */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px 80px;
+  transition: all 0.3s;
+  z-index: 5;
+}
+
+nav.scroll {
+  background-color: var(--cor-branco);
+  box-shadow: 0 0 30px 0 var(--cor-claro);
+}
+
+nav img.logo {
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Button Abrir */
+
+nav button.abrir {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-secundaria-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  margin: 0 0 0 50px;
+  transition: all 0.3s;
+}
+
+nav button.abrir img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 0 0 10px;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav button.abrir:hover {
+  color: var(--cor-principal);
+}
+
+nav button.abrir:hover img {
+  transform: scale(0.6);
+}
+
+/* Button Entrar e Criar */
+
+nav button.entrar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-principal-t1);
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--cor-principal);
+  transition: all 0.3s;
+  margin: 0 0 0 30px;
+}
+
+nav button.entrar:hover {
+  color: var(--cor-secundaria-2);
+  border: 2px solid var(--cor-secundaria-2);
+}
+
+nav button.registrar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-secundaria-2);
+  background-color: transparent;
+  margin-left: auto;
+  transition: all 0.3s;
+}
+
+nav button.registrar:hover {
+  color: var(--cor-principal);
+}
+
+/* Quadro */
+
+nav .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: var(--cor-branco);
+  box-shadow: 0 0 30px 0 var(--cor-claro);
+  position: fixed;
+  top: 100px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+
+nav .quadro.mostrar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: scale(1);
+}
+
+nav .quadro .losango {
+  border-top: 20px solid var(--cor-branco);
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  transform: rotate(180deg);
+  position: fixed;
+  top: -30px;
+  left: 30px;
+}
+
+nav .quadro.hospedagem {
+  left: 330px;
+}
+
+nav .quadro.servicos {
+  left: 480px;
+}
+
+nav .quadro.suporte {
+  left: 610px;
+}
+
+nav .quadro button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: transparent;
+  position: relative;
+  padding: 0 0 0 60px;
+  text-align: left;
+  margin: 15px 0;
+}
+
+nav .quadro button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 50px;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav .quadro button h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-secundaria-2);
+  padding: 0 0 5px 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav .quadro button p {
+  font-family: var(--fonte-light);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-secundaria-2);
+  line-height: 1.6;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav .quadro button:hover img {
+  animation: imgNav 1s linear infinite;
+}
+
+nav .quadro button:hover h3 {
+  color: var(--cor-principal);
+}
+
+nav .quadro button:hover p {
+  color: var(--cor-principal);
+}
+
+@keyframes imgNav {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Menu */
+
+nav button.menu {
+  display: none;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: transparent;
+  width: 30px;
+  height: 15px;
+  min-width: 30px;
+  min-height: 15px;
+  position: relative;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+
+nav button.menu .maior {
+  width: 30px;
+  height: 4px;
+  min-width: 30px;
+  min-height: 4px;
+  border-radius: 40px;
+  background-color: var(--cor-secundaria-2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav button.menu .menor {
+  width: 20px;
+  height: 4px;
+  min-width: 20px;
+  min-height: 4px;
+  border-radius: 40px;
+  background-color: var(--cor-secundaria-2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav button.menu.ativo {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+}
+
+nav button.menu.ativo .maior {
+  top: 50%;
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+nav button.menu.ativo .menor {
+  width: 30px;
+  min-width: 30px;
+  top: 50%;
+  right: 0;
+  transform: rotate(45deg);
+}
+
+nav button.menu:hover div {
+  background-color: var(--cor-principal);
+}
+
+/* Mobile */
+
+nav .mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  padding: 30px 30px 250px 30px;
+  background-color: var(--cor-branco);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+  top: 0;
+}
+
+nav .mobile.mostrar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  top: 65px;
+}
+
+nav .mobile button.opcao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: transparent;
+  position: relative;
+  padding: 0 0 0 60px;
+  text-align: left;
+  margin: 15px 0;
+}
+
+nav .mobile button.opcao img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 50px;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav .mobile button.opcao h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-secundaria-2);
+  padding: 0 0 5px 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav .mobile button.opcao p {
+  font-family: var(--fonte-light);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-secundaria-2);
+  line-height: 1.6;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+nav .mobile button.opcao:hover h3 {
+  color: var(--cor-principal);
+}
+
+nav .mobile button.opcao:hover p {
+  color: var(--cor-principal);
+}
+
+nav .mobile button.logar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-principal);
+  background-color: var(--cor-principal-t1);
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--cor-principal);
+  transition: all 0.3s;
+  margin: 15px 0 20px 0;
+}
+
+nav .mobile button.logar:hover {
+  color: var(--cor-secundaria-2);
+  border: 2px solid var(--cor-secundaria-2);
+}
+
+nav .mobile button.criar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-secundaria-2);
+  background-color: var(--cor-branco);
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--cor-secundaria-2);
+  transition: all 0.3s;
+}
+
+nav .mobile button.criar:hover {
+  color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  nav {
+    padding: 20px 20px;
+  }
+  nav img.logo {
+    width: 100%;
+    max-width: 180px;
+  }
+  nav button.abrir {
+    display: none;
+  }
+  nav button.entrar {
+    display: none;
+  }
+  nav button.registrar {
+    display: none;
+  }
+  nav button.menu {
+    display: flex;
+  }
+  
+  /* Quadro */
+  
+  nav .quadro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: var(--cor-secundaria-3);
+    box-shadow: 0 0 30px 0 var(--cor-secundaria-2);
+    position: fixed;
+    top: 100px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.9);
+    transition: all 0.3s;
+  }
+  
+  nav .quadro.mostrar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: scale(1);
+  }
+  
+  nav .quadro .losango {
+    border-top: 20px solid var(--cor-secundaria-3);
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    transform: rotate(180deg);
+    position: fixed;
+    top: -30px;
+    left: 30px;
+  }
+  
+  nav .quadro.hospedagem {
+    left: 330px;
+  }
+  
+  nav .quadro.servicos {
+    left: 480px;
+  }
+  
+  nav .quadro.suporte {
+    left: 610px;
+  }
+  
+  nav .quadro button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+    padding: 0 0 0 60px;
+    text-align: left;
+    margin: 15px 0;
+  }
+  
+  nav .quadro button img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 50px;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  
+  nav .quadro button h3 {
+    font-family: var(--fonte-bold);
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    color: var(--cor-branco);
+    padding: 0 0 5px 0;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  
+  nav .quadro button p {
+    font-family: var(--fonte-light);
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  
+  nav .quadro button:hover img {
+    animation: imgNav 1s linear infinite;
+  }
+  
+  nav .quadro button:hover h3 {
+    color: var(--cor-principal);
+  }
+  
+  nav .quadro button:hover p {
+    color: var(--cor-principal);
+  }
+  
+  @keyframes imgNav {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

@@ -2,14 +2,11 @@
 
 @import '../../global/global.css';
 
-/* Elements */
-
-@import '../../elements/nav.css';
-@import '../../elements/footer.css';
-@import '../../elements/button-suporte.css';
-
 /* Partials */
 
+@import './partials/nav.css';
+@import './partials/footer.css';
+@import './partials/button-suporte.css';
 @import './partials/section-apresentacao.css';
 @import './partials/section-depoimento.css';
 @import './partials/section-dominio.css';

@@ -1,0 +1,42 @@
+/* <footer> */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--cor-principal);
+  padding: 20px 80px;
+}
+
+footer img {
+  width: 100%;
+  max-width: 200px;
+  margin-right: auto;
+}
+
+footer p {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-branco);
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  footer img {
+    width: 100%;
+    max-width: 200px;
+    margin-right: 0;
+  }
+  footer p {
+    width: 100%;
+    max-width: 250px;
+    padding: 15px 0 0 0;
+  }
+}

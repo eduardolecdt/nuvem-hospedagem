@@ -3,14 +3,14 @@
 button.suporte {
   font-family: var(--fonte-bold);
   font-size: clamp(0.8rem, 3vw, 1rem);
-  color: var(--cor-branco);
+  color: var(--cor-principal);
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--cor-secundaria-2);
+  background-color: var(--cor-branco);
   border: 2px solid var(--cor-principal);
   padding: 15px 25px;
   border-radius: 20px 20px 0 20px;
@@ -25,8 +25,8 @@ button.suporte img {
 }
 
 button.suporte:hover {
-  color: var(--cor-secundaria-2);
-  background-color: var(--cor-branco);
+  color: var(--cor-principal);
+  background-color: var(--cor-secundaria-2);
   border: 2px solid var(--cor-principal);
 }
 

@@ -1,11 +1,6 @@
 /* <section class="apresentacao"> */
 
 section.apresentacao {
-  display: flex;
-  min-height: 150vh;
-}
-
-section.apresentacao * {
   display: none;
 }
 

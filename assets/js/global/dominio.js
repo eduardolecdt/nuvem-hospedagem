@@ -6,8 +6,9 @@
 
   /* ---- Elements ---- */
 
-  const inputDominio = document.querySelector('input[name="dominio"]')
-  const buttonAcessar = document.querySelector('button[name="acessar"]')
+  const sectionDominio = document.querySelector('section[name="dominio"]')
+  const inputDominio = sectionDominio.querySelector('input[name="dominio"]')
+  const buttonAcessar = sectionDominio.querySelector('button[name="acessar"]')
 
   /* ---- Events ---- */
 
