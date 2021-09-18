@@ -2,7 +2,9 @@
     /* ---- State ---- */
   
     const STATE = {
+      seletor: '',
       wordpressBasico: {
+        nome: 'Básico',
         processamentoIndice: 1,
         memoria: '512mb',
         espaco: '10Gb',
@@ -10,14 +12,15 @@
         contasEmail: 'ilimitado',
         dominios: '1 site',
         precos: {
-          mensal: 'R$ 19,90',
-          trimestral: 'R$ 18,90 = 10% de desconto',
-          semestral: 'R$ 16,90 = 20% de desconto',
-          anual: 'R$ 15,90 = 35% de desconto'
+          mensal: { real: '19', centavo: '90', desconto: '0%' },
+          trimestral: { real: '18', centavo: '90', desconto: '10%' },
+          semestral: { real: '16', centavo: '90', desconto: '20%' },
+          anual: { real: '15', centavo: '90', desconto: '35%' },
         },
         linkBotao: 'https://google.com/1'
       },
       wordpressIntermediario: {
+        nome: 'Intermediário',
         processamentoIndice: 2,
         memoria: '768mb',
         espaco: '20Gb',
@@ -25,14 +28,15 @@
         contasEmail: 'ilimitado',
         dominios: '1 site',
         precos: {
-          mensal: 'R$ 39,90',
-          trimestral: 'R$ 38,90 = 10% de desconto',
-          semestral: 'R$ 36,90 = 20% de desconto',
-          anual: 'R$ 35,90 = 35% de desconto'
+          mensal: { real: '39', centavo: '90', desconto: '0%' },
+          trimestral: { real: '38', centavo: '90', desconto: '10%' },
+          semestral: { real: '36', centavo: '90', desconto: '20%' },
+          anual: { real: '35', centavo: '90', desconto: '35%' }
         },
         linkBotao: 'https://google.com/2'
       },
       wordpressAvancado: {
+        nome: 'Avançado',
         processamentoIndice: 4,
         memoria: '1024mb',
         espaco: '50Gb',
@@ -40,14 +44,15 @@
         contasEmail: 'ilimitado',
         dominios: '3 sites',
         precos: {
-          mensal: 'R$ 69,90',
-          trimestral: 'R$ 68,90 = 10% de desconto',
-          semestral: 'R$ 66,90 = 20% de desconto',
-          anual: 'R$ 65,90 = 35% de desconto'
+          mensal: { real: '69', centavo: '90', desconto: '0%' },
+          trimestral: { real: '68', centavo: '90', desconto: '10%' },
+          semestral: { real: '66', centavo: '90', desconto: '20%' },
+          anual: { real: '65', centavo: '90', desconto: '35%' }
         },
         linkBotao: 'https://google.com/3'
       },
       wordpressEspecial: {
+        nome: 'Especial',
         processamentoIndice: 5,
         memoria: '2048mb',
         espaco: '100Gb',
@@ -55,10 +60,10 @@
         contasEmail: 'ilimitado',
         dominios: '4 sites',
         precos: {
-          mensal: 'R$ 139,90',
-          trimestral: 'R$ 138,90 = 10% de descontoo',
-          semestral: 'R$ 136,90 = 20% de desconto',
-          anual: 'R$ 135,90 = 35% de desconto'
+          mensal: { real: '139', centavo: '90', desconto: '0%' },
+          trimestral: { real: '138', centavo: '90', desconto: '10%' },
+          semestral: { real: '136', centavo: '90', desconto: '20%' },
+          anual: { real: '135', centavo: '90', desconto: '35%' }
         },
         linkBotao: 'https://google.com/4'
       },
@@ -73,13 +78,22 @@
     const buttonConsultarWordpressAvancado = sectionPlanos.querySelector('button[name="consultarWordpressAvancado"]')
     const buttonConsultarWordpressEspecial = sectionPlanos.querySelector('button[name="consultarWordpressEspecial"]')
     const buttonAssinar = sectionPlanos.querySelector('button[name="assinar"]')
+    const buttonMensal = sectionPlanos.querySelector('button[name="mensal"]')
+    const buttonTrimestral = sectionPlanos.querySelector('button[name="trimestral"]')
+    const buttonSemestral = sectionPlanos.querySelector('button[name="semestral"]')
+    const buttonAnual = sectionPlanos.querySelector('button[name="anual"]')
 
     const pMemoria = sectionPlanos.querySelector('p[name="memoria"]')
     const pEspaco = sectionPlanos.querySelector('p[name="espaco"]')
     const pTransferencia = sectionPlanos.querySelector('p[name="transferencia"]')
     const pContasEmail = sectionPlanos.querySelector('p[name="contasEmail"]')
     const pDominios = sectionPlanos.querySelector('p[name="dominios"]')
+    const h2NomePlano = sectionPlanos.querySelector('h2[name="nomePlano"]')
     const divPotencia = sectionPlanos.querySelector('div[name="potencia"]')
+    
+    const h4Real = sectionPlanos.querySelector('h4[name="real"]')
+    const h3Centavo = sectionPlanos.querySelector('h3[name="centavo"]')
+    const pDesconto = sectionPlanos.querySelector('p[name="desconto"]')
 
     /* ---- Methods ---- */
 
@@ -89,6 +103,10 @@
       clickConsultarWordpressAvancado()
       clickConsultarWordpressEspecial()
       clickAssinar()
+      clickMensal()
+      clickTrimestral()
+      clickSemestral()
+      clickAnual()
     }
     
     /* ---- Events ---- */
@@ -113,51 +131,96 @@
       buttonAssinar.addEventListener('click', callbackClickAssinar)
     }
 
+    function clickMensal () {
+      buttonMensal.addEventListener('click', callbackClickMensal)
+    }
+
+    function clickTrimestral () {
+      buttonTrimestral.addEventListener('click', callbackClickTrimestral)
+    }
+
+    function clickSemestral () {
+      buttonSemestral.addEventListener('click', callbackClickSemestral)
+    }
+
+    function clickAnual () {
+      buttonAnual.addEventListener('click', callbackClickAnual)
+    }
+
     /* ---- Callbacks ---- */
 
     function callbackClickConsultarWordpressBasico () {
       const dados = STATE.wordpressBasico
+      STATE.seletor = 'wordpressBasico'
+
       limpar()
 
-      importarEstatisticas(dados)
+      importarPlano(dados)
       ativarBotaoPlano(buttonConsultarWordpressBasico)
-      customizarLinkBotaoAssinar(dados.linkBotao)
-      selecionarPotenciaProcessamento(dados.processamentoIndice)
+
+      importarPrecos('mensal')
+      ativarBotaoPreco(buttonMensal)
     }
 
     function callbackClickConsultarWordpressIntermediario () {
       const dados = STATE.wordpressIntermediario
+      STATE.seletor = 'wordpressIntermediario'
+
       limpar()
 
-      importarEstatisticas(dados)
+      importarPlano(dados)
       ativarBotaoPlano(buttonConsultarWordpressIntermediario)
-      customizarLinkBotaoAssinar(dados.linkBotao)
-      selecionarPotenciaProcessamento(dados.processamentoIndice)
+      
+      importarPrecos('mensal')
+      ativarBotaoPreco(buttonMensal)
     }
 
     function callbackClickConsultarWordpressAvancado () {
       const dados = STATE.wordpressAvancado
-      limpar()
+      STATE.seletor = 'wordpressAvancado'
 
-      importarEstatisticas(dados)
+      limpar()
+      importarPlano(dados)
       ativarBotaoPlano(buttonConsultarWordpressAvancado)
-      customizarLinkBotaoAssinar(dados.linkBotao)
-      selecionarPotenciaProcessamento(dados.processamentoIndice)
+      ativarBotaoPreco(buttonMensal)
     }
     
     function callbackClickConsultarWordpressEspecial () {
       const dados = STATE.wordpressEspecial
+      STATE.seletor = 'wordpressEspecial'
+
       limpar()
 
-      importarEstatisticas(dados)
+      importarPlano(dados)
       ativarBotaoPlano(buttonConsultarWordpressEspecial)
-      customizarLinkBotaoAssinar(dados.linkBotao)
-      selecionarPotenciaProcessamento(dados.processamentoIndice)
+      
+      importarPrecos('mensal')
+      ativarBotaoPreco(buttonMensal)
     }
 
     function callbackClickAssinar () {
       const url = buttonAssinar.getAttribute('data-url')
       window.location.assign(url)
+    }
+
+    function callbackClickMensal () {
+      ativarBotaoPreco(buttonMensal)
+      importarPrecos('mensal')
+    }
+
+    function callbackClickTrimestral () {
+      ativarBotaoPreco(buttonTrimestral)
+      importarPrecos('trimestral')
+    }
+
+    function callbackClickSemestral () {
+      ativarBotaoPreco(buttonSemestral)
+      importarPrecos('semestral')
+    }
+
+    function callbackClickAnual () {
+      ativarBotaoPreco(buttonAnual)
+      importarPrecos('anual')
     }
 
     /* ---- View ---- */
@@ -168,19 +231,38 @@
       pTransferencia.innerText = ''
       pContasEmail.innerText = ''
       pDominios.innerText = ''
+      h2NomePlano.innerText = ''
 
+      h4Real.innerText = ''
+      h3Centavo.innerText = ''
+      pDesconto.innerText = ''
+
+      buttonAssinar.removeAttribute('data-url')
       desativarBotoesPlanos()
-      customizarLinkBotaoAssinar('')
+      desativarBotoesPrecos()
       limparPotenciaProcessamento()
     }
 
-    function importarEstatisticas (dados) {
+    function importarPlano (dados) {
       pMemoria.innerText = dados.memoria
       pEspaco.innerText = dados.espaco
       pTransferencia.innerText = dados.transferencia
       pContasEmail.innerText = dados.contasEmail
       pDominios.innerText = dados.dominios
+      h2NomePlano.innerText = dados.nome
+
+      buttonAssinar.setAttribute('data-url', dados.linkBotao)
+      selecionarPotenciaProcessamento(dados.processamentoIndice)
     }
+
+    function importarPrecos (periodo) {
+      const preco = STATE[STATE.seletor].precos[periodo]
+      h4Real.innerText = preco.real
+      h3Centavo.innerText = `,${preco.centavo}`
+      pDesconto.innerText = `${preco.desconto} de desconto`
+    }
+
+    // Botao do Plano
 
     function ativarBotaoPlano (button) {
       desativarBotoesPlanos()
@@ -194,9 +276,21 @@
       buttonConsultarWordpressEspecial.classList.remove('ativo')
     }
 
-    function customizarLinkBotaoAssinar (url) {
-      buttonAssinar.setAttribute('data-url', url)
+    // Botao do Preco
+
+    function ativarBotaoPreco (button) {
+      desativarBotoesPrecos()
+      button.classList.add('ativo')
     }
+
+    function desativarBotoesPrecos () {
+      buttonMensal.classList.remove('ativo')
+      buttonTrimestral.classList.remove('ativo')
+      buttonSemestral.classList.remove('ativo')
+      buttonAnual.classList.remove('ativo')
+    }
+
+    // Potencia de Processamento
 
     function selecionarPotenciaProcessamento (indice) {
       limparPotenciaProcessamento()
