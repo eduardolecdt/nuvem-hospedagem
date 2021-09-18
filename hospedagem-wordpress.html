@@ -269,7 +269,7 @@
   </section>
 
   <!-- section -->
-  <section class="planos">
+  <section class="planos" name="planos">
     <div class="titulo">
       <h2>Escolha seu <span>plano</span></h2>
       <p>Planos que se encaixam na sua necessidade. Escolha abaixo o plano que desejar e clique no botão continuar para prosseguir.</p>
@@ -286,8 +286,8 @@
         </button>
         <div class="linha">
           <p>Potência Processamento</p>
-          <div class="potencia">
-            <div class="ativo"></div>
+          <div class="potencia" name="potencia">
+            <div></div>
             <div></div>
             <div></div>
             <div></div>
@@ -297,23 +297,23 @@
         </div>
         <div class="linha">
           <p>Memória</p>
-          <p class="destaque">512mb</p>
+          <p class="destaque" name="memoria"></p>
         </div>
         <div class="linha">
           <p>Espaço em Disco</p>
-          <p class="destaque">10gb</p>
+          <p class="destaque" name="espaco"></p>
         </div>
         <div class="linha">
           <p>Transferência</p>
-          <p class="destaque">Ilimitado</p>
+          <p class="destaque" name="transferencia"></p>
         </div>
         <div class="linha">
           <p>Contas de e-mail</p>
-          <p class="destaque">Ilimitado</p>
+          <p class="destaque" name="contasEmail"></p>
         </div>
         <div class="linha">
           <p>Domínios</p>
-          <p class="destaque">1 site</p>
+          <p class="destaque" name="dominios"></p>
         </div>
         <div class="periodo">
           <button type="button" class="ativo">Mensal</button>
@@ -331,25 +331,25 @@
         <button type="button" class="assinar">Assinar Agora</button>
       </div>
       <div class="botoes">
-        <button type="button">
+        <button type="button" name="consultarWordpressBasico">
           <div class="losango"></div>
           <img src="./files/images/pages/hospedagem-wordpress/icone-wordpress.png">
           <h3>Wordpress <span>Básico</span></h3>
           <p>Perfeito para sites pequenos</p>
         </button>
-        <button type="button" class="ativo">
+        <button type="button" class="ativo" name="consultarWordpressIntermediario">
           <div class="losango"></div>
           <img src="./files/images/pages/hospedagem-wordpress/icone-wordpress.png">
           <h3>Wordpress <span>Intermediário</span></h3>
           <p>Perfeito para sites em crescimento</p>
         </button>
-        <button type="button">
+        <button type="button" name="consultarWordpressAvancado">
           <div class="losango"></div>
           <img src="./files/images/pages/hospedagem-wordpress/icone-wordpress.png">
           <h3>Wordpress <span>Avançado</span></h3>
           <p>Perfeito para sites grandes</p>
         </button>
-        <button type="button">
+        <button type="button" name="consultarWordpressEspecial">
           <div class="losango"></div>
           <img src="./files/images/pages/hospedagem-wordpress/icone-wordpress.png">
           <h3>Wordpress <span>Especial</span></h3>
@@ -396,6 +396,8 @@
   <script src="./assets/js/global/global.js"></script>
   <script src="./assets/js/global/nav.js"></script>
   <script src="./assets/js/global/dominio.js"></script>
+  
+  <script src="./assets/js/pages//hospedagem-wordpress/hospedagem-wordpress.js"></script>
 
 </body>
 </html>
