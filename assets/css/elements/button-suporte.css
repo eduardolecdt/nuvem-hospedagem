@@ -15,7 +15,7 @@ button.suporte {
   padding: 15px 25px;
   border-radius: 20px 20px 0 20px;
   transition: all 0.3s;
-  z-index: 2;
+  z-index: 5;
 }
 
 button.suporte img {
