@@ -98,11 +98,13 @@
     /* ---- Methods ---- */
 
     function habilitarEventos () {
+      clickAssinar()
+      
       clickConsultarWordpressBasico()
       clickConsultarWordpressIntermediario()
       clickConsultarWordpressAvancado()
       clickConsultarWordpressEspecial()
-      clickAssinar()
+      
       clickMensal()
       clickTrimestral()
       clickSemestral()
@@ -110,6 +112,12 @@
     }
     
     /* ---- Events ---- */
+
+    function clickAssinar () {
+      buttonAssinar.addEventListener('click', callbackClickAssinar)
+    }
+
+    // Planos
 
     function clickConsultarWordpressBasico () {
       buttonConsultarWordpressBasico.addEventListener('click', callbackClickConsultarWordpressBasico)
@@ -127,9 +135,7 @@
       buttonConsultarWordpressEspecial.addEventListener('click', callbackClickConsultarWordpressEspecial)
     }
 
-    function clickAssinar () {
-      buttonAssinar.addEventListener('click', callbackClickAssinar)
-    }
+    // Precos
 
     function clickMensal () {
       buttonMensal.addEventListener('click', callbackClickMensal)
@@ -149,59 +155,54 @@
 
     /* ---- Callbacks ---- */
 
+    function callbackClickAssinar () {
+      const url = buttonAssinar.getAttribute('data-url')
+      window.location.assign(url)
+    }
+
+    // Planos
+
     function callbackClickConsultarWordpressBasico () {
-      const dados = STATE.wordpressBasico
       STATE.seletor = 'wordpressBasico'
 
       limpar()
-
-      importarPlano(dados)
+      importarPlano(STATE.wordpressBasico)
       ativarBotaoPlano(buttonConsultarWordpressBasico)
-
       importarPrecos('mensal')
       ativarBotaoPreco(buttonMensal)
     }
 
     function callbackClickConsultarWordpressIntermediario () {
-      const dados = STATE.wordpressIntermediario
       STATE.seletor = 'wordpressIntermediario'
 
       limpar()
-
-      importarPlano(dados)
+      importarPlano(STATE.wordpressIntermediario)
       ativarBotaoPlano(buttonConsultarWordpressIntermediario)
-      
       importarPrecos('mensal')
       ativarBotaoPreco(buttonMensal)
     }
 
     function callbackClickConsultarWordpressAvancado () {
-      const dados = STATE.wordpressAvancado
       STATE.seletor = 'wordpressAvancado'
 
       limpar()
-      importarPlano(dados)
+      importarPlano(STATE.wordpressAvancado)
       ativarBotaoPlano(buttonConsultarWordpressAvancado)
+      importarPrecos('mensal')
       ativarBotaoPreco(buttonMensal)
     }
     
     function callbackClickConsultarWordpressEspecial () {
-      const dados = STATE.wordpressEspecial
       STATE.seletor = 'wordpressEspecial'
 
       limpar()
-
-      importarPlano(dados)
+      importarPlano(STATE.wordpressEspecial)
       ativarBotaoPlano(buttonConsultarWordpressEspecial)
-      
       importarPrecos('mensal')
       ativarBotaoPreco(buttonMensal)
     }
 
-    function callbackClickAssinar () {
-      const url = buttonAssinar.getAttribute('data-url')
-      window.location.assign(url)
-    }
+    // Precos
 
     function callbackClickMensal () {
       ativarBotaoPreco(buttonMensal)
