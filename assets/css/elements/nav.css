@@ -16,7 +16,6 @@ nav {
 
 nav.scroll {
   background-color: var(--cor-secundaria-3);
-  box-shadow: 0 0 30px 0 var(--cor-secundaria-2);
 }
 
 nav img.logo {

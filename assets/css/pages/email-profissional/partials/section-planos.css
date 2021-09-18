@@ -1,12 +1,440 @@
 /* <section class="planos"> */
 
 section.planos {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  width: 100%;
+  background-color: var(--cor-secundaria-1);
+  background-image: url('../../../../../files/images/global/background-1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+section.planos .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+section.planos .titulo  h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--cor-branco);
+}
+
+section.planos .titulo  h2 span {
+  color: var(--cor-principal);
+}
+
+section.planos .titulo  p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  padding: 5px 0 100px 0;
+}
+
+/* Componente */
+
+section.planos .componente {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* Componente Visualização */
+
+section.planos .componente .visualizacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 55%;
+  background-color: var(--cor-secundaria-2);
+  border-radius: 20px;
+  position: relative;
+  padding: 50px 0 0 0;
+}
+
+section.planos .componente .visualizacao .nome {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 180px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--cor-secundaria-3);
+  position: absolute;
+  left: -30px;
+  top: -50px;
+}
+
+section.planos .componente .visualizacao .nome h3 {
+  font-family: var(--fonte-light);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-principal);
+}
+
+section.planos .componente .visualizacao .nome h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: var(--cor-principal);
+}
+
+section.planos .componente .visualizacao button.comparar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-principal);
+  position: absolute;
+  top: -40px;
+  left: 180px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+section.planos .componente .visualizacao button.comparar img {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  pointer-events: none;
+  margin: 0 10px 0 0;
+}
+
+section.planos .componente .visualizacao button.comparar:hover {
+  opacity: 0.7;
+}
+
+section.planos .componente .visualizacao .linha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 30px 0 30px;
+}
+
+section.planos .componente .visualizacao .linha p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  text-align: right;
+  width: 50%;
+}
+
+section.planos .componente .visualizacao .linha p.destaque {
+  font-family: var(--fonte-bold);
+  color: var(--cor-branco);
+  text-align: left;
+  width: 50%;
+  padding: 0 0 0 20px;
+}
+
+section.planos .componente .visualizacao .linha .potencia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  padding: 0 50px 0 20px;
+}
+
+section.planos .componente .visualizacao .linha .potencia div {
+  width: 25px;
+  min-width: 25px;
+  height: 8px;
+  min-height: 8px;
+  border-radius: 20px;
+  background-color: var(--cor-secundaria-1);
+  transition: all 0.3s;
+}
+
+section.planos .componente .visualizacao .linha .potencia div.ativo {
+  background-color: var(--cor-principal);
+}
+
+section.planos .componente .visualizacao .periodo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 30px 50px;
+}
+
+section.planos .componente .visualizacao .periodo button {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-principal);
+  background-color: var(--cor-secundaria-1);
+  border: 2px solid var(--cor-secundaria-1);
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: 100%;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+
+section.planos .componente .visualizacao .periodo button.ativo {
+  background-color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+  color: var(--cor-branco);
+}
+
+section.planos .componente .visualizacao .periodo button:hover {
+  border: 2px solid var(--cor-principal);
+}
+
+section.planos .componente .visualizacao .preco {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+
+section.planos .componente .visualizacao .preco h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1;
+}
+
+section.planos .componente .visualizacao .preco h4 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(4rem, 3vw, 5rem);
+  padding: 0 5px;
+  line-height: 1;
+  color: var(--cor-branco);
+}
+
+section.planos .componente .visualizacao .preco h5 {
+  font-family: var(--fonte-light);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1;
+}
+
+section.planos .componente .visualizacao p.desconto {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  padding: 10px 0 40px 0;
+}
+
+section.planos .componente .visualizacao button.assinar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--cor-branco);
+  background-color: var(--cor-principal);
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  transition: all 0.3s;
+}
+
+section.planos .componente .visualizacao button.assinar:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-principal);
+}
+
+/* Componente Botões */
+
+section.planos .componente .botoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 45%;
+  padding: 0 0 0 40px;
+  min-height: 572px;
+}
+
+section.planos .componente .botoes button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--cor-secundaria-2);
+  border: 3px solid var(--cor-secundaria-2);
+  text-align: left;
+  width: 100%;
+  position: relative;
+  padding: 50px 30px 50px 100px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+section.planos .componente .botoes button:hover {
+  background-color: var(--cor-secundaria-3);
+  border: 3px solid var(--cor-secundaria-3);
+}
+
+section.planos .componente .botoes button img {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0, -50%);
+  pointer-events: none;
+  width: 100%;
+  max-width: 50px;
+}
+
+section.planos .componente .botoes button h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  color: var(--cor-branco);
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+section.planos .componente .botoes button p {
+  font-family: var(--fonte-light);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-texto);
+  padding: 5px 0 0 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+section.planos .componente .botoes button .losango {
+  border-top: 20px solid var(--cor-principal);
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  transform: rotate(90deg) translate(0, 50%);
+  position: absolute;
+  top: 38%;
+  left: -21px;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+section.planos .componente .botoes button.ativo .losango {
+  opacity: 1;
+  visibility: visible;
+}
+
+section.planos .componente .botoes button.ativo {
+  border: 3px solid var(--cor-principal);
+  background-color: transparent;
+}
+
+section.planos .componente .botoes button.ativo h3,
+section.planos .componente .botoes button.ativo p {
+  color: var(--cor-principal);
+}
+
+section.planos .componente .botoes button.ativo img {
+  animation: pulsandoImg 1s linear infinite;
+}
+
+@keyframes pulsandoImg {
+  0% {
+    transform: scale(1) translate(0, -50%);
+  }
+  50% {
+    transform: scale(1.1) translate(0, -50%);
+  }
+  100% {
+    transform: scale(1) translate(0, -50%);
+  }
 }
 
 /* Responsivo */
 
 @media screen and (max-width: 1000px) {
+  section.planos {
+    padding: 80px 20px;
+  }
+  section.planos .titulo  p {
+    padding: 5px 0 40px 0;
+  }
+  section.planos .componente {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  section.planos .componente .visualizacao {
+    max-width: 100%;
+    padding: 50px 0 0 0;
+  }
+  section.planos .componente .visualizacao .nome {
+    max-width: 130px;
+    left: -10px;
+    top: -35px;
+  }
+  section.planos .componente .visualizacao button.comparar {
+    top: -30px;
+    left: 140px;
+  }
+  section.planos .componente .visualizacao .linha {
+    padding: 15px 20px 0 20px;
+  }
+  section.planos .componente .visualizacao .linha p {
+    width: 40%;
+  }
+  section.planos .componente .visualizacao .linha p.destaque {
+    width: 55%;
+    padding: 0 0 0 15px;
+  }
+  section.planos .componente .visualizacao .linha .potencia {
+    width: 55%;
+    padding: 0 30px 0 15px;
+  }
+  section.planos .componente .visualizacao .linha .potencia div {
+    width: 20px;
+    min-width: 20px;
+  }
   
+  section.planos .componente .visualizacao .periodo {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 30px 0 30px;
+  }
+  section.planos .componente .visualizacao .periodo button {
+    width: auto;
+    margin: 10px;
+  }
+  section.planos .componente .visualizacao .preco h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+  section.planos .componente .visualizacao .preco h4 {
+    font-size: clamp(3rem, 3vw, 4rem);
+  }
+  section.planos .componente .visualizacao .preco h5 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+  section.planos .componente .botoes {
+    max-width: 100%;
+    padding: 0 0 60px 0;
+    min-height: auto;
+  }
+  section.planos .componente .botoes button {
+    padding: 20px 30px 23px 60px;
+    margin: 0 0 20px 0;
+  }
+  section.planos .componente .botoes button img {
+    max-width: 25px;
+    left: 20px;
+  }
+  section.planos .componente .botoes button .losango {
+    display: none;
+  }
 }
   

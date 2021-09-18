@@ -1,11 +1,192 @@
 /* <section class="apresentacao"> */
 
 section.apresentacao {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 200px 80px;
+  position: relative;
+  background-color: var(--cor-secundaria-2);
+  background-image: url('../../../../../files/images/global/background-2.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+section.apresentacao img.principal {
+  position: absolute;
+  top: 100px;
+  right: 80px;
+  width: 100%;
+  max-width: 32%;
+  animation: imgPrincipalMexendo 30s infinite;
+}
+
+@keyframes imgPrincipalMexendo {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+section.apresentacao .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 650px;
+}
+
+section.apresentacao .texto h1 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  width: 100%;
+  max-width: 400px;
+}
+
+section.apresentacao .texto h1 span {
+  color: var(--cor-principal);
+}
+
+section.apresentacao .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 20px 0;
+}
+
+section.apresentacao .texto .input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+}
+
+section.apresentacao .texto .input img.cadeado {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%);
+  width: 100%;
+  max-width: 30px;
+  pointer-events: none;
+}
+
+section.apresentacao .texto .input h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-principal);
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  transform: translate(0, -50%);
+  pointer-events: none;
+}
+
+section.apresentacao .texto .input button {
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+}
+
+section.apresentacao .texto .input button img {
+  width: 100%;
+  max-width: 70px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+section.apresentacao .texto .input button:hover img {
+  opacity: 0.7;
+  animation: imgButton 1s linear infinite;
+}
+
+@keyframes imgButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+section.apresentacao .texto .input input {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  background-color: var(--cor-secundaria-1);
+  border-radius: 100px;
+  padding: 40px 40px 40px 215px;
+  width: 100%;
+}
+
+section.apresentacao .texto .input input::placeholder {
+  opacity: 1;
+  color: var(--cor-texto);
+}
+
+section.apresentacao .texto .input input:focus {
+  color: var(--cor-principal);
 }
 
 /* Responsivo */
 
 @media screen and (max-width: 1000px) {
-  
+  section.apresentacao {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px 350px 20px;
+  }
+  section.apresentacao .texto h1 {
+    max-width: 250px;
+  }
+  section.apresentacao img.principal {
+    top: auto;
+    bottom: -130px;
+    right: 0;
+    width: 90%;
+    max-width: 90%;
+  }
+  @keyframes imgPrincipalMexendo {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(20px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  section.apresentacao .texto .input img.cadeado {
+    display: none;
+  }
+  section.apresentacao .texto .input h3 {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    left: 25px;
+  }
+  section.apresentacao .texto .input button {
+    right: 10px;
+  }
+  section.apresentacao .texto .input button img {
+    max-width: 45px;
+  }
+  section.apresentacao .texto .input input {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    padding: 25px 25px 25px 107px;
+  }
 }

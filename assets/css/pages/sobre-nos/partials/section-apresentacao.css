@@ -1,11 +1,60 @@
 /* <section class="apresentacao"> */
 
 section.apresentacao {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 150px 80px 100px 80px;
+  position: relative;
+  background-color: var(--cor-branco);
+  background-image: url('../../../../../files/images/pages/sobre-nos/background-1.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+section.apresentacao .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+}
+
+section.apresentacao .texto h1 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-secundaria-2);
+  line-height: 1.5;
+}
+
+section.apresentacao .texto h1 span {
+  color: var(--cor-principal);
+}
+
+section.apresentacao .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-secundaria-2);
+  line-height: 1.7;
+  padding: 10px 0 20px 0;
+}
+
+section.apresentacao .texto p.destaque {
+  font-family: var(--fonte-bold);
+  color: var(--cor-principal);
 }
 
 /* Responsivo */
 
 @media screen and (max-width: 1000px) {
-  
+  section.apresentacao {
+    display: flex;
+    flex-direction: column;
+    padding: 110px 20px 80px 20px;
+  }
+  section.apresentacao .texto {
+    max-width: 350px;
+    margin-right: auto;
+  }
 }

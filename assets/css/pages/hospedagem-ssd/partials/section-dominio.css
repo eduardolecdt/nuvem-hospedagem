@@ -48,6 +48,7 @@ section.dominio .input img.cadeado {
   transform: translate(0, -50%);
   width: 100%;
   max-width: 30px;
+  pointer-events: none;
 }
 
 section.dominio .input h3 {
@@ -58,6 +59,7 @@ section.dominio .input h3 {
   top: 50%;
   left: 90px;
   transform: translate(0, -50%);
+  pointer-events: none;
 }
 
 section.dominio .input button {
