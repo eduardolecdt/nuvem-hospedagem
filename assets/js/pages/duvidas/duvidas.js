@@ -6,7 +6,7 @@
   /* ---- Elements ---- */
 
   const sectionApresentacao = document.querySelector('section[name="apresentacao"]')
-  const divResultado = document.querySelector('div[name="resultado"]')
+  const divResultado = sectionApresentacao.querySelector('div[name="resultado"]')
 
   const buttonFinanceiro = sectionApresentacao.querySelector('button[name="financeiro"]')
   const buttonMigracao = sectionApresentacao.querySelector('button[name="migracao"]')
