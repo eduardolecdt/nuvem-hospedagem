@@ -4,6 +4,7 @@
 
   const body = document.querySelector('body')
   const nav = document.querySelector('nav')
+  const logoNav = nav.querySelector('img[name="logo"]')
   const abrirHospedagem = nav.querySelector('button[name="abrirHospedagem"]')
   const abrirServicos = nav.querySelector('button[name="abrirServicos"]')
   const abrirSuporte = nav.querySelector('button[name="abrirSuporte"]')
@@ -61,12 +62,23 @@
     })
   }
 
+  function voltarInicioLogo () {
+    logoNav.addEventListener('click', () => {
+      const a = document.createElement('a')
+      a.rel = 'noopener noreferrer nofollow'
+      a.target = '_self'
+      a.href = '/'
+      a.click()
+    })
+  }
+
   // Start
   adicionarClasse()
   cliqueAbrirHospedagem()
   cliqueAbrirServicos()
   cliqueAbrirSuporte()
   abrirFecharMenuMobile()
+  voltarInicioLogo()
 
 }())
 
