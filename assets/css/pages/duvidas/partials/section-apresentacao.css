@@ -1,11 +1,229 @@
 /* <section class="apresentacao"> */
 
 section.apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  background-color: var(--cor-secundaria-3);
+  background-image: url('../../../../../files/images/global/background-3.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+section.apresentacao .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 150px 80px 50px 80px;
+}
+
+section.apresentacao .titulo h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+section.apresentacao .titulo h2 span {
+  color: var(--cor-principal);
+}
+
+section.apresentacao .titulo p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 0 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+section.apresentacao .botoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px 80px 80px;
+  width: 100%;
+}
+
+section.apresentacao .botoes button {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  color: var(--cor-branco);
+  width: 100%;
+  max-width: 32%;
+  background-color: var(--cor-secundaria-2);
+  border: 3px solid var(--cor-secundaria-2);
+  padding: 30px 30px 30px 90px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  position: relative;
+  text-align: left;
+}
+
+section.apresentacao .botoes button.ativo {
+  border: 3px solid var(--cor-principal);
+  background-color: transparent;
+  pointer-events: none;
+}
+
+section.apresentacao .botoes button:hover {
+  background-color: var(--cor-secundaria-1);
+  border: 3px solid var(--cor-secundaria-1);
+}
+
+section.apresentacao .botoes button img {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  width: 100%;
+  max-width: 40px;
+  transform: translate(0, -50%);
+  pointer-events: none;
+}
+
+section.apresentacao .botoes button .losango {
+  border-bottom: 30px solid var(--cor-principal);
+  border-top: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-left: 30px solid transparent;
+  position: absolute;
+  bottom: -85px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+section.apresentacao .botoes button.ativo .losango {
+  opacity: 1;
+  visibility: visible;
+}
+
+section.apresentacao .resultado {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 80px;
+  background-color: var(--cor-principal);
+}
+
+section.apresentacao .resultado .pergunta.financeiro {
   display: none;
+}
+
+section.apresentacao .resultado .pergunta.migracao {
+  display: none;
+}
+
+section.apresentacao .resultado .pergunta.hospedagem {
+  display: none;
+}
+
+section.apresentacao .resultado.financeiro .pergunta.financeiro {
+  display: flex;
+}
+
+section.apresentacao .resultado.migracao .pergunta.migracao {
+  display: flex;
+}
+
+section.apresentacao .resultado.hospedagem .pergunta.hospedagem {
+  display: flex;
+}
+
+section.apresentacao .resultado .pergunta {
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  max-width: 33%;
+  margin: 10px 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding: 0 30px 0 0;
+}
+
+section.apresentacao .resultado .pergunta h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2em);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  margin: 0 0 5px 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+section.apresentacao .resultado .pergunta h3 img {
+  width: 100%;
+  max-width: 20px;
+  margin: 0 10px 0 0;
+  pointer-events: none;
+}
+
+section.apresentacao .resultado .pergunta:hover h3 {
+  opacity: 0.6;
+}
+
+section.apresentacao .resultado .pergunta h4 {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2em);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  pointer-events: none;
+  line-height: 0;
+}
+
+section.apresentacao .resultado .pergunta.ativo h4 {
+  opacity: 1;
+  visibility: visible;
+  line-height: 1.5;
 }
 
 /* Responsivo */
 
 @media screen and (max-width: 1000px) {
-  
+  section.apresentacao .titulo {
+    padding: 110px 20px 30px 20px;
+  }
+  section.apresentacao .botoes {
+    flex-direction: column;
+    padding: 0 20px 50px 20px;
+  }
+  section.apresentacao .botoes button {
+    max-width: 100%;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding: 20px 20px 20px 60px;
+    margin: 20px 0 0 0;
+  }
+  section.apresentacao .botoes button img {
+    left: 20px;
+    max-width: 30px;
+  }
+  section.apresentacao .botoes button .losango {
+    display: none;
+  }
+  section.apresentacao .resultado {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+  section.apresentacao .resultado .pergunta {
+    max-width: 100%;
+    padding: 0;
+    margin: 10px 0;
+  }
 }

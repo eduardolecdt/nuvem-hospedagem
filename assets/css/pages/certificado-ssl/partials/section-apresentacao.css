@@ -90,19 +90,7 @@ section.apresentacao .texto button:hover {
 }
 
 section.apresentacao .texto button:hover img {
-  animation: imgPulsando 1s linear infinite;
-}
-
-@keyframes imgPulsando {
-  0% {
-    transform: scale(1) translate(0, -50%);
-  }
-  50% {
-    transform: scale(0.9) translate(0, -50%);
-  }
-  100% {
-    transform: scale(1) translate(0, -50%);
-  }
+  opacity: 0.5;
 }
 
 /* Responsivo */

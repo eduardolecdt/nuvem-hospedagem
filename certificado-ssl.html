@@ -216,7 +216,7 @@
     <div class="texto">
       <h1>Deixe seu <span>site wordpress</span> em uma super hospedagem.</h1>
       <p>O seu site wordpress merece mais velocidade, estamos aqui para dar isso a você. Contrate seu plano com as configurações que mais combinarem com seu projeto.</p>
-      <button type="button" data-scroll="">
+      <button type="button" data-scroll="#planos">
         VER PLANOS
         <img src="./files/images/global/check-azul.svg">
       </button>
@@ -233,7 +233,7 @@
         <h2>Selo de segurança</h2>
         <p>Exibe um selo de segurança na barra de endereços do seu navegador.</p>
       </div>
-      <div class="parte">
+      <div class="parte meio">
         <h2>Criptografia SHA-256</h2>
         <p>Com 2048 bits, nossos certificados protegem os dados confidenciais transmitidos do navegador para o servidor web.</p>
         <img src="./files/images/pages/certificado-ssl/icone-escudo.png">
@@ -244,14 +244,10 @@
         <p>Compatibilidade universal com navegadores e dispositivos móveis.</p>
       </div>
     </div>
-    <div class="faixa">
-      <div class="losango"></div>
-      <p>Já possui um site em outra empresa? Venha para Nuvem Hospedagem. Nós migramos seu site gratuitamente.</p>
-    </div>
   </section>
 
   <!-- section -->
-  <section class="planos">
+  <section class="planos" id="planos">
     <div class="titulo">
       <h2>Escolha seu <span>plano</span></h2>
       <p>Planos que se encaixam na sua necessidade. Escolha abaixo o plano que desejar e clique no botão continuar para prosseguir.</p>
@@ -267,13 +263,13 @@
           <h3>,00</h3>
           <h5>/ano</h5>
         </div>
-        <button type="button">Quero Agora</button>
+        <button type="button" class="assinar" data-pagina="https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=10">Quero Agora</button>
       </div>
       <div class="gratuito">
         <h2>Certificado</h2>
         <h2><span>Let's ENCRYPT</span></h2>
         <p>O certificado let's encrypt está disponível para ativação via painel de financeiro em todos os planos de ssd, wordpress e vps.</p>
-        <button type="button">Ver planos</button>
+        <button type="button" class="assinar" data-pagina="/hospedagem-ssd">Ver planos</button>
       </div>
     </div>
   </section>

@@ -13,11 +13,11 @@
         dominios: '1 site',
         precos: {
           mensal: { real: '19', centavo: '90', desconto: '0%' },
-          trimestral: { real: '18', centavo: '90', desconto: '10%' },
-          semestral: { real: '16', centavo: '90', desconto: '20%' },
-          anual: { real: '15', centavo: '90', desconto: '35%' },
+          trimestral: { real: '19', centavo: '00', desconto: '4%' },
+          semestral: { real: 'XX', centavo: 'XX', desconto: 'XX%' },
+          anual: { real: '16', centavo: '65', desconto: '16%' },
         },
-        linkBotao: 'https://google.com/1'
+        linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=30&billingcycle=monthly'
       },
       wordpressIntermediario: {
         nome: 'Intermediário',
@@ -29,11 +29,11 @@
         dominios: '1 site',
         precos: {
           mensal: { real: '39', centavo: '90', desconto: '0%' },
-          trimestral: { real: '38', centavo: '90', desconto: '10%' },
-          semestral: { real: '36', centavo: '90', desconto: '20%' },
-          anual: { real: '35', centavo: '90', desconto: '35%' }
+          trimestral: { real: '37', centavo: '90', desconto: '5%' },
+          semestral: { real: '35', centavo: '90', desconto: '9%' },
+          anual: { real: '33', centavo: '25', desconto: '16%' }
         },
-        linkBotao: 'https://google.com/2'
+        linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=31&billingcycle=monthly'
       },
       wordpressAvancado: {
         nome: 'Avançado',
@@ -45,15 +45,15 @@
         dominios: '3 sites',
         precos: {
           mensal: { real: '69', centavo: '90', desconto: '0%' },
-          trimestral: { real: '68', centavo: '90', desconto: '10%' },
-          semestral: { real: '66', centavo: '90', desconto: '20%' },
-          anual: { real: '65', centavo: '90', desconto: '35%' }
+          trimestral: { real: '69', centavo: '90', desconto: '0%' },
+          semestral: { real: '66', centavo: '50', desconto: '4%' },
+          anual: { real: '59', centavo: '30', desconto: '15%' }
         },
-        linkBotao: 'https://google.com/3'
+        linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=32&billingcycle=monthly'
       },
       wordpressEspecial: {
         nome: 'Especial',
-        processamentoIndice: 5,
+        processamentoIndice: 6,
         memoria: '2048mb',
         espaco: '100Gb',
         transferencia: 'ilimitado',
@@ -61,11 +61,11 @@
         dominios: '4 sites',
         precos: {
           mensal: { real: '139', centavo: '90', desconto: '0%' },
-          trimestral: { real: '138', centavo: '90', desconto: '10%' },
-          semestral: { real: '136', centavo: '90', desconto: '20%' },
-          anual: { real: '135', centavo: '90', desconto: '35%' }
+          trimestral: { real: 'XX', centavo: 'XX', desconto: 'XX%' },
+          semestral: { real: 'XX', centavo: 'XX', desconto: 'XX%' },
+          anual: { real: '117', centavo: '90', desconto: '15%' }
         },
-        linkBotao: 'https://google.com/4'
+        linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=33&billingcycle=monthly'
       },
     }
   
@@ -297,7 +297,9 @@
       limparPotenciaProcessamento()
       const divs = divPotencia.querySelectorAll('div')
       if (indice > divs.length) return
-      divs[indice - 1].classList.add('ativo')
+      for (const numero in [...Array(indice)]) {
+        divs[numero].classList.add('ativo')
+      }
     }
 
     function limparPotenciaProcessamento () {

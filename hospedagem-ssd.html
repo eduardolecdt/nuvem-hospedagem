@@ -219,7 +219,7 @@
     <div class="texto">
       <h1>Coloque o seu site em um <span>servidor 100% SSD.</span></h1>
       <p>Tenha uma velocidade nunca vista antes usando nossos servidores SSD prontos para você chegar e ativar seu site!</p>
-      <button type="button" data-scroll="">
+      <button type="button" data-scroll="#planos">
         VER PLANOS
         <img src="./files/images/global/check-azul.svg">
       </button>
@@ -236,7 +236,7 @@
         <h2>Servidores Rápidos</h2>
         <p>Você piscou e seu site já carregou, rápido assim. Garantimos, ficará como um foguete ou devolvemos o seu dinheiro.</p>
       </div>
-      <div class="parte">
+      <div class="parte meio">
         <h2>Certificado SSL</h2>
         <p>Deixe o seu site mais seguro com o certificado Let's encrypt. Disponível em todos os planos gratuitamente.</p>
         <img src="./files/images/pages/hospedagem-ssd/icone-cadeado.png">
@@ -263,7 +263,7 @@
   </section>
 
   <!-- section -->
-  <section class="planos">
+  <section class="planos" name="planos" id="planos">
     <div class="titulo">
       <h2>Escolha seu <span>plano</span></h2>
       <p>Planos que se encaixam na sua necessidade. Escolha abaixo o plano que desejar e clique no botão continuar para prosseguir.</p>
@@ -272,7 +272,7 @@
       <div class="visualizacao">
         <div class="nome">
           <h3>SSD</h3>
-          <h2>Intermediário</h2>
+          <h2 name="nomePlano"></h2>
         </div>
         <button type="button" class="comparar">
           <img src="./files/images/pages/hospedagem-ssd/icone-comparar.png">
@@ -280,8 +280,8 @@
         </button>
         <div class="linha">
           <p>Potência Processamento</p>
-          <div class="potencia">
-            <div class="ativo"></div>
+          <div class="potencia" name="potencia">
+            <div></div>
             <div></div>
             <div></div>
             <div></div>
@@ -291,59 +291,59 @@
         </div>
         <div class="linha">
           <p>Memória</p>
-          <p class="destaque">512mb</p>
+          <p class="destaque" name="memoria"></p>
         </div>
         <div class="linha">
           <p>Espaço em Disco</p>
-          <p class="destaque">10gb</p>
+          <p class="destaque" name="espaco"></p>
         </div>
         <div class="linha">
           <p>Transferência</p>
-          <p class="destaque">Ilimitado</p>
+          <p class="destaque" name="transferencia"></p>
         </div>
         <div class="linha">
           <p>Contas de e-mail</p>
-          <p class="destaque">Ilimitado</p>
+          <p class="destaque" name="contasEmail"></p>
         </div>
         <div class="linha">
           <p>Domínios</p>
-          <p class="destaque">1 site</p>
+          <p class="destaque" name="dominios"></p>
         </div>
         <div class="periodo">
-          <button type="button" class="ativo">Mensal</button>
-          <button type="button">Trimestral</button>
-          <button type="button">Semestral</button>
-          <button type="button">Anual</button>
+          <button type="button" name="mensal">Mensal</button>
+          <button type="button" name="trimestral">Trimestral</button>
+          <button type="button" name="semestral">Semestral</button>
+          <button type="button" name="anual">Anual</button>
         </div>
         <div class="preco">
           <h3>R$</h3>
-          <h4>19</h4>
-          <h3>,90</h3>
+          <h4 name="real"></h4>
+          <h3 name="centavo"></h3>
           <h5>/mês</h5>
         </div>
-        <p class="desconto">0% de desconto</p>
-        <button type="button" class="assinar">Assinar Agora</button>
+        <p class="desconto" name="desconto"></p>
+        <button type="button" class="assinar" name="assinar">Assinar Agora</button>
       </div>
       <div class="botoes">
-        <button type="button">
+        <button type="button" name="consultarSsdBasico">
           <div class="losango"></div>
           <img src="./files/images/pages/hospedagem-ssd/icone-rapido.png">
           <h3>SSD <span>Básico</span></h3>
           <p>Perfeito para sites pequenos</p>
         </button>
-        <button type="button" class="ativo">
+        <button type="button" class="ativo" name="consultarSsdIntermediario">
           <div class="losango"></div>
           <img src="./files/images/pages/hospedagem-ssd/icone-rapido.png">
           <h3>SSD <span>Intermediário</span></h3>
           <p>Perfeito para sites em crescimento</p>
         </button>
-        <button type="button">
+        <button type="button" name="consultarSsdAvancado">
           <div class="losango"></div>
           <img src="./files/images/pages/hospedagem-ssd/icone-rapido.png">
           <h3>SSD <span>Avançado</span></h3>
           <p>Perfeito para sites grandes</p>
         </button>
-        <button type="button">
+        <button type="button" name="consultarSsdEspecial">
           <div class="losango"></div>
           <img src="./files/images/pages/hospedagem-ssd/icone-rapido.png">
           <h3>SSD <span>Especial</span></h3>
@@ -361,23 +361,23 @@
       <p>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</p>
       <div class="duvida">
         <h3><img src="./files/images/global/seta.svg">Quanto tempo leva a migração?</h3>
-        <h4></h4>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
       <div class="duvida">
         <h3><img src="./files/images/global/seta.svg">Meu site ficará fora do ar?</h3>
-        <h4></h4>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
       <div class="duvida">
         <h3><img src="./files/images/global/seta.svg">Tem algum custo adicional?</h3>
-        <h4></h4>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time. As principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
       <div class="duvida">
         <h3><img src="./files/images/global/seta.svg">Consigo migrar contas de e-mails?</h3>
-        <h4></h4>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
       <div class="duvida">
         <h3><img src="./files/images/global/seta.svg">Estou protegido contra ataques DDoS?</h3>
-        <h4></h4>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
     </div>
   </section>
@@ -419,6 +419,8 @@
   <script src="./assets/js/global/global.js"></script>
   <script src="./assets/js/global/nav.js"></script>
   <script src="./assets/js/global/dominio.js"></script>
+
+  <script src="./assets/js/pages/hospedagem-ssd/hospedagem-ssd.js"></script>
 
 </body>
 </html>

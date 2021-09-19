@@ -216,7 +216,7 @@
     <div class="texto">
       <h1>Tenha um <span>e-mail em servidores de alta</span> tecnologia para sua empresa.</h1>
       <p>Tenha um e-mail profissional personalizado com o seu domínio e passe mais credibilidade aos seus contatos.</p>
-      <button type="button" data-scroll="">
+      <button type="button" data-scroll="#planos">
         VER PLANOS
         <img src="./files/images/global/check-azul.svg">
       </button>
@@ -242,21 +242,21 @@
         <h2>Livre</h2>
         <p>Gerencia suas contas de e-mails pelo programa que achar melhor para seu projeto!</p>
       </div>
-      <div class="parte">
+      <div class="parte meio">
         <h2>Organização</h2>
-        <p>Organize seus contatos em grupos, crie pastas, redirecionamentos e muito mais.</p>
+        <p>Organize seus contatos em grupos, crie pastas, redirecionamentos e muito mais. A maior organização para você manter o seu trabalho produtivo.</p>
         <img src="./files/images/pages/email-profissional/icone-cartas.png">
       </div>
       <div class="parte">
         <img src="./files/images/pages/email-profissional/icone-telas.png">
         <h2>Acesso global</h2>
-        <p>Acesse seus e-mails de qualquer lugar via computador, tablet ou celular.</p>
+        <p>Acesse seus e-mails de qualquer lugar via computador, tablet ou celular. Direto do seu painel na Nuvem é possível integrar o e-mail em qualquer aparelho.</p>
       </div>
     </div>
   </section>
 
   <!-- section -->
-  <section class="planos">
+  <section class="planos" name="planos" id="planos">
     <div class="titulo">
       <h2>Escolha seu <span>plano</span></h2>
       <p>Planos que se encaixam na sua necessidade. Escolha abaixo o plano que desejar e clique no botão continuar para prosseguir.</p>
@@ -264,62 +264,62 @@
     <div class="componente">
       <div class="visualizacao">
         <div class="nome">
-          <h3>EMAIL</h3>
-          <h2>10gb</h2>
+          <h3>E-mail</h3>
+          <h2 name="nomePlano"></h2>
         </div>
         <button type="button" class="comparar">
-          <img src="./files/images/pages/hospedagem-ssd/icone-comparar.png">
+          <img src="./files/images/pages/email-profissional/icone-comparar.png">
           Comparar Planos
         </button>
         <div class="linha">
           <p>Contas de E-mail</p>
-          <p class="destaque">25</p>
+          <p class="destaque" name="contas"></p>
         </div>
         <div class="linha">
           <p>Proteção Anti-SPAM</p>
-          <p class="destaque">Ativo</p>
+          <p class="destaque">Ativa</p>
         </div>
         <div class="linha">
           <p>Backup Diário</p>
           <p class="destaque">Ativo</p>
         </div>
         <div class="linha">
-          <p>Suporte Especializado</p>
+          <p>Suporte Expecializado</p>
           <p class="destaque">Incluso</p>
         </div>
         <div class="periodo">
-          <button type="button" class="ativo">Mensal</button>
-          <button type="button">Trimestral</button>
-          <button type="button">Semestral</button>
-          <button type="button">Anual</button>
+          <button type="button" name="mensal">Mensal</button>
+          <button type="button" name="trimestral">Trimestral</button>
+          <button type="button" name="semestral">Semestral</button>
+          <button type="button" name="anual">Anual</button>
         </div>
         <div class="preco">
           <h3>R$</h3>
-          <h4>19</h4>
-          <h3>,90</h3>
+        <h4 name="real"></h4>
+          <h3 name="centavo"></h3>
           <h5>/mês</h5>
         </div>
-        <p class="desconto">0% de desconto</p>
-        <button type="button" class="assinar">Assinar Agora</button>
+        <p class="desconto" name="desconto"></p>
+        <button type="button" class="assinar" name="assinar">Assinar Agora</button>
       </div>
       <div class="botoes">
-        <button type="button">
+        <button type="button" name="consultarEmail10gb">
           <div class="losango"></div>
           <img src="./files/images/pages/email-profissional/icone-arroba.png">
-          <h3>E-mail <span>Básico</span></h3>
-          <p>Perfeito para pequenos projetos</p>
+          <h3>E-mail <span>10gb</span></h3>
+          <p>Perfeito para sites pequenos</p>
         </button>
-        <button type="button" class="ativo">
+        <button type="button" class="ativo" name="consultarEmail50gb">
           <div class="losango"></div>
           <img src="./files/images/pages/email-profissional/icone-arroba.png">
           <h3>E-mail <span>50gb</span></h3>
-          <p>Perfeito para projetos em crescimento</p>
+          <p>Perfeito para sites em crescimento</p>
         </button>
-        <button type="button">
+        <button type="button" name="consultarEmail100gb">
           <div class="losango"></div>
           <img src="./files/images/pages/email-profissional/icone-arroba.png">
           <h3>E-mail <span>100gb</span></h3>
-          <p>Perfeito para grandes projetos</p>
+          <p>Perfeito para sites grandes</p>
         </button>
       </div>
     </div>
@@ -391,6 +391,8 @@
   <script src="./assets/js/global/global.js"></script>
   <script src="./assets/js/global/nav.js"></script>
   <script src="./assets/js/global/dominio.js"></script>
+  
+  <script src="./assets/js/pages/email-profissional/email-profissional.js"></script>
 
 </body>
 </html>

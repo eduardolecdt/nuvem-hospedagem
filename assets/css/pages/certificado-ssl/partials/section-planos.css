@@ -1,12 +1,215 @@
 /* <section class="planos"> */
 
 section.planos {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  width: 100%;
+  background-color: var(--cor-secundaria-3);
+  background-image: url('../../../../../files/images/global/background-3.png');
+  background-size: cover;
+  background-position: center;
+}
+
+section.planos .titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+section.planos .titulo  h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--cor-branco);
+}
+
+section.planos .titulo  h2 span {
+  color: var(--cor-principal);
+}
+
+section.planos .titulo  p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  padding: 5px 0 50px 0;
+}
+
+/* Componente */
+
+section.planos .componente {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* Componente Visualização */
+
+section.planos .componente .pago {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 55%;
+  background-color: var(--cor-secundaria-2);
+  border-radius: 20px;
+  position: relative;
+  padding: 60px 0 0 0;
+}
+
+section.planos .componente .pago h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+section.planos .componente .pago h2 span {
+  color: var(--cor-principal);
+}
+
+section.planos .componente .pago p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 40px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+section.planos .componente .pago .preco {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0 60px 0;
+}
+
+section.planos .componente .pago .preco h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1;
+}
+
+section.planos .componente .pago .preco h4 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(4rem, 3vw, 5rem);
+  padding: 0 5px;
+  line-height: 1;
+  color: var(--cor-branco);
+}
+
+section.planos .componente .pago .preco h5 {
+  font-family: var(--fonte-light);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1;
+}
+
+section.planos .componente .pago button.assinar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--cor-branco);
+  background-color: var(--cor-principal);
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  transition: all 0.3s;
+}
+
+section.planos .componente .pago button.assinar:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-principal);
+}
+
+/* Componente Botões */
+
+section.planos .componente .gratuito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 45%;
+  background-color: var(--cor-secundaria-2);
+  border-radius: 20px;
+  position: relative;
+  padding: 50px 20px;
+  min-height: 526px;
+  max-height: 526px;
+  margin: 0 0 0 30px;
+}
+
+section.planos .componente .gratuito h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-principal);
+  line-height: 1.5;
+}
+
+section.planos .componente .gratuito p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-principal);
+  line-height: 1.7;
+  padding: 10px 0 40px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+section.planos .componente .gratuito button.assinar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--cor-branco);
+  background-color: var(--cor-principal);
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  transition: all 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+section.planos .componente .gratuito button.assinar:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-principal);
 }
 
 /* Responsivo */
 
 @media screen and (max-width: 1000px) {
-  
+  section.planos {
+    padding: 80px 20px;
+  }
+  section.planos .componente {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.planos .componente .pago {
+    max-width: 100%;
+  }
+  section.planos .componente .pago p {
+    max-width: 270px;
+  }
+  section.planos .componente .gratuito {
+    max-width: 100%;
+    padding: 50px 20px 80px 20px;
+    min-height: auto;
+    max-height: auto;
+    margin: 30px 0 0 0;
+  }
 }
   

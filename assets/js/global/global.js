@@ -31,7 +31,7 @@
 
   function habilitarCliqueRolarAteSeletor () {
     window.addEventListener('click', (evento) => { 
-      const seletor = evento.target.getAttribute('data-scroll-seletor')
+      const seletor = evento.target.getAttribute('data-scroll')
       if (!seletor) return
   
       rolarAteSeletor(seletor)
