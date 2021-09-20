@@ -94,8 +94,7 @@ section.qualidades .texto p {
     padding: 80px 20px;
   }
   section.qualidades img.principal {
-    max-width: 60%;
-    margin: 50px 0 0 0;
+    display: none;
   }
   section.qualidades .texto {
     align-items: flex-start;
