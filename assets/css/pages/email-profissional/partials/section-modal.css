@@ -1,0 +1,227 @@
+/* <section class="modal"> */
+
+section.modal {
+  display: none;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+section.modal.mostrar {
+  display: flex;
+}
+
+section.modal.mostrar .conteudo {
+  animation: mostrarConteudo 0.2s linear;
+}
+
+@keyframes mostrarConteudo {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+section.modal .conteudo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding: 100px;
+  background-color: var(--cor-secundaria-3-t8);
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+section.modal .conteudo .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  background-color: var(--cor-secundaria-2);
+  padding: 50px;
+  border-radius: 20px;
+  position: relative;
+}
+
+section.modal.mostrar .conteudo .quadro {
+  animation: mostrarQuadro 0.2s linear;
+}
+
+@keyframes mostrarQuadro {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+section.modal .conteudo .quadro button.fechar {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-branco);
+  background-color: var(--cor-vermelho);
+  padding: 12px 25px;
+  border-radius: 100px;
+  position: absolute;
+  top: -25px;
+  right: 30px;
+  transition: all 0.3s;
+}
+
+section.modal .conteudo .quadro button.fechar:hover {
+  background-color: var(--cor-principal);
+}
+
+section.modal .conteudo .quadro .titulo {
+  text-align: center;
+  padding: 0 0 40px 0;
+}
+
+section.modal .conteudo .quadro .titulo h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+section.modal .conteudo .quadro .titulo h2 span {
+  color: var(--cor-principal);
+}
+
+section.modal .conteudo .quadro .titulo p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 5px 0 0 0;
+}
+
+section.modal .conteudo .quadro .titulo h4 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-principal);
+  padding: 30px 0 0 0;
+  display: none;
+}
+
+section.modal .conteudo .quadro .tabela {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+section.modal .conteudo .quadro .tabela .titulos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px 30px 20px;
+}
+
+section.modal .conteudo .quadro .tabela .titulos h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-texto);
+  width: 100%;
+  max-width: 100px;
+  text-align: center;
+}
+
+section.modal .conteudo .quadro .tabela .linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+
+section.modal .conteudo .quadro .tabela .linha.destaque {
+  background-color: var(--cor-secundaria-1);
+}
+
+section.modal .conteudo .quadro .tabela .linha p {
+  font-family: var(--fonte-light);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-texto);
+  width: 100%;
+  max-width: 100px;
+  text-align: center;
+}
+
+section.modal .conteudo .quadro .tabela .linha .processamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100px;
+}
+
+section.modal .conteudo .quadro .tabela .linha .processamento div {
+  width: 100%;
+  margin: 0 2px;
+  height: 5px;
+  min-height: 5px;
+  background-color: var(--cor-secundaria-3);
+  border-radius: 20px;
+}
+
+section.modal .conteudo .quadro .tabela .linha.destaque .processamento div {
+  background-color: var(--cor-secundaria-2);
+}
+
+section.modal .conteudo .quadro .tabela .linha .processamento div.ativo {
+  background-color: var(--cor-principal);
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.modal .conteudo {
+    padding: 100px 20px;
+  }
+  section.modal .conteudo .quadro {
+    padding: 50px 20px;
+  }
+  section.modal .conteudo .quadro .titulo h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  section.modal .conteudo .quadro .tabela {
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  section.modal .conteudo .quadro .tabela .titulos {
+    min-width: 800px;
+  }
+  section.modal .conteudo .quadro .tabela .titulos h3 {
+    max-width: 80px;
+  }
+  section.modal .conteudo .quadro .tabela .linha {
+    min-width: 800px;
+  }
+  section.modal .conteudo .quadro .tabela .linha p {
+    max-width: 80px;
+  }
+  section.modal .conteudo .quadro .tabela .linha .processamento {
+    max-width: 80px;
+  }
+}

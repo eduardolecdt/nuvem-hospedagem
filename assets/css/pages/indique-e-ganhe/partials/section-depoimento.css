@@ -1,0 +1,146 @@
+/* <section class="depoimento"> */
+
+section.depoimento {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 80px;
+  position: relative;
+  background-color: var(--cor-secundaria-2);
+  background-image: url('../../../../../files/images/global/background-2.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+section.depoimento .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 550px;
+}
+
+section.depoimento .texto h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  width: 100%;
+  max-width: 350px;
+}
+
+section.depoimento .texto h2 span {
+  color: var(--cor-principal);
+}
+
+section.depoimento .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 0 0;
+}
+
+section.depoimento img.celular {
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  width: 100%;
+  max-width: 400px;
+  animation: celularMexendo 30s linear infinite;
+  z-index: 1;
+}
+
+@keyframes celularMexendo {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-50px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+section.depoimento img.perfil {
+  position: absolute;
+  top: 80px;
+  right: 550px;
+  width: 100%;
+  max-width: 150px;
+  animation: perfilMexendo 30s linear infinite;
+  z-index: 2;
+}
+
+@keyframes perfilMexendo {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+section.depoimento .quadro {
+  background-color: var(--cor-secundaria-3);
+  padding: 30px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  width: 100%;
+  max-width: 500px;
+  animation: quadroMexendo 30s linear infinite;
+  z-index: 2;
+}
+
+section.depoimento .quadro p {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-branco);
+  line-height: 1.6;
+}
+
+@keyframes quadroMexendo {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-30px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.depoimento {
+    padding: 80px 50px 400px 20px;
+  }
+  section.depoimento img.celular {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    max-width: 80%;
+  }
+  section.depoimento img.perfil {
+    top: auto;
+    bottom: 250px;
+    right: auto;
+    left: 50px;
+    max-width: 80px;
+  }
+  section.depoimento .quadro {
+    bottom: 50px;
+    right: 20px;
+    width: 100%;
+    max-width: 300px;
+  }
+}

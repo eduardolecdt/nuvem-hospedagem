@@ -1,0 +1,132 @@
+/* <section class="apresentacao"> */
+
+section.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 200px 80px;
+  position: relative;
+  background-color: var(--cor-secundaria-2);
+  background-image: url('../../../../../files/images/global/background-2.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+section.apresentacao img.principal {
+  position: absolute;
+  top: 100px;
+  right: 80px;
+  width: 100%;
+  max-width: 50%;
+  animation: imgPrincipalMexendo 30s infinite;
+}
+
+@keyframes imgPrincipalMexendo {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+section.apresentacao .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 550px;
+}
+
+section.apresentacao .texto h1 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+section.apresentacao .texto h1 span {
+  color: var(--cor-principal);
+}
+
+section.apresentacao .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 20px 0;
+}
+
+section.apresentacao .texto button {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-principal);
+  background-color: transparent;
+  border: 3px solid var(--cor-principal);
+  border-radius: 100px;
+  padding: 20px 90px 20px 30px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+section.apresentacao .texto button img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 100%;
+  max-width: 40px;
+  pointer-events: none;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+
+section.apresentacao .texto button:hover {
+  border: 3px solid var(--cor-branco);
+  color: var(--cor-branco);
+}
+
+section.apresentacao .texto button:hover img {
+  opacity: 0.5;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.apresentacao {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px 350px 20px;
+  }
+  section.apresentacao .texto {
+    max-width: 350px;
+    margin-right: auto;
+  }
+  section.apresentacao img.principal {
+    top: auto;
+    bottom: -30px;
+    right: 0;
+    width: 110%;
+    max-width: 110%;
+  }
+  @keyframes imgPrincipalMexendo {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(20px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  section.apresentacao .texto button {
+    padding: 15px 90px 15px 20px;
+  }
+  section.apresentacao .texto button img {
+    max-width: 30px;
+  }
+}

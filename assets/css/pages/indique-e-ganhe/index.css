@@ -1,4 +1,4 @@
-/* Hospedagem Wordpress */
+/* Indique e ganhe */
 
 @import '../../global/global.css';
 
@@ -11,10 +11,9 @@
 /* Partials */
 
 @import './partials/section-apresentacao.css';
+@import './partials/section-contato.css';
 @import './partials/section-depoimento.css';
-@import './partials/section-dominio.css';
 @import './partials/section-informacao.css';
-@import './partials/section-modal.css';
-@import './partials/section-painel.css';
-@import './partials/section-planos.css';
 @import './partials/section-qualidades.css';
+@import './partials/section-servicos.css';
+@import './partials/section-servidor.css';

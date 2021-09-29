@@ -1,0 +1,85 @@
+/* <section class="servidor"> */
+
+section.servidor {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  padding: 150px 80px;
+  background-color: var(--cor-secundaria-2);
+  background-image: url('../../../../../files/images/global/background-2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+section.servidor img.principal {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translate(0, -50%);
+  width: 100%;
+  max-width: 50%;
+  animation: rodandoMundo 60s linear infinite;
+}
+
+@keyframes rodandoMundo {
+  0% {
+    transform: translate(0, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, -50%) rotate(360deg);
+  }
+}
+
+section.servidor .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+section.servidor .texto h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+section.servidor .texto h2 span {
+  color: var(--cor-principal);
+}
+
+section.servidor .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 0 0;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.servidor {
+    padding: 60px 20px 400px 20px;
+  }
+  section.servidor img.principal {
+    top: auto;
+    bottom: -20%;
+    right: 50%;
+    transform: translate(50%, 0);
+    width: 110%;
+    max-width: 110%;
+  }
+  @keyframes rodandoMundo {
+    0% {
+      transform: translate(50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(50%, 0) rotate(360deg);
+    }
+  }
+}

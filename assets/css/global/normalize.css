@@ -29,7 +29,7 @@ body {
   background-color: #132D41;
 }
 
-body.bloqueado {
+body.bloquear {
   overflow: hidden;
 }
 

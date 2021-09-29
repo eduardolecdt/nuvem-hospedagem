@@ -1,0 +1,117 @@
+/* <section class="qualidades"> */
+
+section.qualidades {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-secundaria-3);
+  background-image: url('../../../../../files/images/global/background-3.png');
+  background-size: cover;
+  background-position: center;
+  padding: 80px;
+}
+
+section.qualidades img.principal {
+  width: 100%;
+  max-width: 25%;
+  animation: imgPulsando 30s linear infinite;
+}
+
+@keyframes imgPulsando {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+section.qualidades .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  max-width: 50%;
+  margin-left: auto;
+}
+
+section.qualidades .texto .parte {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+section.qualidades .texto .parte.meio {
+  margin: 80px 250px 80px 0;
+}
+
+section.qualidades .texto .parte img {
+  width: 100%;
+  max-width: 100px;
+  position: absolute;
+  top: 0;
+  left: -150px;
+}
+
+section.qualidades .texto .parte.meio img {
+  top: 0;
+  left: auto;
+  right: -150px;
+}
+
+section.qualidades .texto h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+section.qualidades .texto h2 span {
+  color: var(--cor-principal);
+}
+
+section.qualidades .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 0 0;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.qualidades {
+    flex-direction: column-reverse;
+    padding: 80px 20px;
+  }
+  section.qualidades img.principal {
+    display: none;
+  }
+  section.qualidades .texto {
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  section.qualidades .texto .parte {
+    padding: 0 0 0 60px;
+  }
+  section.qualidades .texto .parte.meio {
+    padding: 0 60px 0 0;
+    margin: 50px 0 50px 0;
+  }
+  section.qualidades .texto .parte img {
+    max-width: 50px;
+    left: 0;
+  }
+  section.qualidades .texto .parte.meio img {
+    right: 0;
+  }
+}

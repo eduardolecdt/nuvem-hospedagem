@@ -149,6 +149,11 @@
         <h3>Sobre a Nuvem</h3>
         <p>Conheça mais sobre a Nuvem, uma empresa com mais de 10 anos de história.</p>
       </button>
+      <button type="button" data-pagina="/indique-e-ganhe">
+        <img src="./files/images/pages/indique-e-ganhe/icone-saco-dinheiro.png">
+        <h3>Indique e Ganhe</h3>
+        <p>Veja como ganhar uma ótima renda extra indicando a Nuvem.</p>
+      </button>
     </div>
     <!-- Menu -->
     <button type="button" class="menu" name="abrirMenuMobile">
@@ -207,6 +212,11 @@
         <img src="./files/images/pages/contato/icone-duvida.png">
         <h3>Sobre a Nuvem</h3>
         <p>Conheça mais sobre a Nuvem, uma empresa com mais de 10 anos de história.</p>
+      </button>
+      <button type="button" class="opcao" data-pagina="/indique-e-ganhe">
+        <img src="./files/images/pages/indique-e-ganhe/icone-saco-dinheiro.png">
+        <h3>Indique e Ganhe</h3>
+        <p>Veja como ganhar uma ótima renda extra indicando a Nuvem.</p>
       </button>
     </div>
   </nav> 
@@ -267,7 +277,7 @@
           <h3>E-mail</h3>
           <h2 name="nomePlano"></h2>
         </div>
-        <button type="button" class="comparar">
+        <button type="button" class="comparar" name="abrirModal">
           <img src="./files/images/pages/email-profissional/icone-comparar.png">
           Comparar Planos
         </button>
@@ -325,31 +335,75 @@
     </div>
   </section>
 
+  <!-- Modal Comparar -->
+  <section class="modal" name="modal">
+    <div class="conteudo">
+      <div class="quadro">
+        <button type="button" class="fechar" name="fechar">Fechar quadro</button>
+        <div class="titulo">
+          <h2>Compare os <span>planos!</span></h2>
+          <p>Abaixo você conseguirá comparar cada plano de e-mail da Nuvem Hospedagem!</p>
+          <h4>Arraste para direita -></h4>
+        </div>
+        <div class="tabela">
+          <div class="titulos">
+            <h3>Plano</h3>
+            <h3>Contas de email</h3>
+            <h3>Proteção AntiSPAM</h3>
+            <h3>Backup Diário</h3>
+            <h3>Suporte especializado</h3>
+          </div>
+          <div class="linha destaque">
+            <p>E-mail 10gb</p>
+            <p>25</p>
+            <p>Ativo</p>
+            <p>Ativo</p>
+            <p>Incluso</p>
+          </div>
+          <div class="linha">
+            <p>E-mail 10gb</p>
+            <p>ilimitadas</p>
+            <p>Ativo</p>
+            <p>Ativo</p>
+            <p>Incluso</p>
+          </div>
+          <div class="linha destaque">
+            <p>E-mail 10gb</p>
+            <p>ilimitadas</p>
+            <p>Ativo</p>
+            <p>Ativo</p>
+            <p>Incluso</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- section -->
-  <section class="duvidas">
+  <section class="duvidas" name="duvidas">
     <img class="principal" src="./files/images/pages/hospedagem-vps/personagem.png">
     <div class="texto">
       <h2>Dúvidas <span>Frequentes</span></h2>
       <p>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</p>
-      <div class="duvida">
+      <div class="duvida" name="duvida">
         <h3><img src="./files/images/global/seta.svg">Quanto tempo leva a migração?</h3>
-        <h4></h4>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
-      <div class="duvida">
-        <h3><img src="./files/images/global/seta.svg">Meu site ficará fora do ar?</h3>
-        <h4></h4>
+      <div class="duvida" name="duvida">
+        <h3><img src="./files/images/global/seta.svg">Quanto tempo leva a migração?</h3>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
-      <div class="duvida">
-        <h3><img src="./files/images/global/seta.svg">Tem algum custo adicional?</h3>
-        <h4></h4>
+      <div class="duvida" name="duvida">
+        <h3><img src="./files/images/global/seta.svg">Quanto tempo leva a migração?</h3>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
-      <div class="duvida">
-        <h3><img src="./files/images/global/seta.svg">Consigo migrar contas de e-mails?</h3>
-        <h4></h4>
+      <div class="duvida" name="duvida">
+        <h3><img src="./files/images/global/seta.svg">Quanto tempo leva a migração?</h3>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
-      <div class="duvida">
-        <h3><img src="./files/images/global/seta.svg">Estou protegido contra ataques DDoS?</h3>
-        <h4></h4>
+      <div class="duvida" name="duvida">
+        <h3><img src="./files/images/global/seta.svg">Quanto tempo leva a migração?</h3>
+        <h4>Abaixo listamos as principais dúvidas que os clientes da Nuvem tem. Caso sua dúvida não esteja qui, entre em contato com nosso time.</h4>
       </div>
     </div>
   </section>
@@ -391,7 +445,8 @@
   <script src="./assets/js/global/global.js"></script>
   <script src="./assets/js/global/nav.js"></script>
   <script src="./assets/js/global/dominio.js"></script>
-  
+  <script src="./assets/js/global/modal.js"></script>
+  <script src="./assets/js/pages/email-profissional/colapsibles.js"></script>
   <script src="./assets/js/pages/email-profissional/email-profissional.js"></script>
 
 </body>
