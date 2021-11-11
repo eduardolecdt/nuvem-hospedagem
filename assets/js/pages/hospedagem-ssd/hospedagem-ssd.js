@@ -13,10 +13,10 @@
       contasEmail: 'ilimitado',
       dominios: '1 site',
       precos: {
-        mensal: { real: '19', centavo: '90', desconto: '0%' },
-        trimestral: { real: '19', centavo: '00', desconto: '4%' },
-        semestral: { real: 'XX', centavo: 'XX', desconto: 'XX%' },
-        anual: { real: '16', centavo: '65', desconto: '16%' },
+          mensal: { real: '24', centavo: '90', desconto: '0%' },
+          trimestral: { real: '23', centavo: '90', desconto: '4%' },
+          semestral: { real: '22', centavo: '90', desconto: '8%' },
+          anual: { real: '21', centavo: '16', desconto: '15%' },
       },
       linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=30&billingcycle=monthly'
     },
@@ -29,10 +29,10 @@
       contasEmail: 'ilimitado',
       dominios: '1 site',
       precos: {
-        mensal: { real: '39', centavo: '90', desconto: '0%' },
-        trimestral: { real: '37', centavo: '90', desconto: '5%' },
-        semestral: { real: '35', centavo: '90', desconto: '9%' },
-        anual: { real: '33', centavo: '25', desconto: '16%' }
+          mensal: { real: '39', centavo: '90', desconto: '0%' },
+          trimestral: { real: '37', centavo: '90', desconto: '5%' },
+          semestral: { real: '36', centavo: '70', desconto: '8%' },
+          anual: { real: '33', centavo: '90', desconto: '15%' }
       },
       linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=31&billingcycle=monthly'
     },
@@ -45,10 +45,10 @@
       contasEmail: 'ilimitado',
       dominios: '3 sites',
       precos: {
-        mensal: { real: '69', centavo: '90', desconto: '0%' },
-        trimestral: { real: '69', centavo: '90', desconto: '0%' },
-        semestral: { real: '66', centavo: '50', desconto: '4%' },
-        anual: { real: '59', centavo: '30', desconto: '15%' }
+          mensal: { real: '69', centavo: '90', desconto: '0%' },
+          trimestral: { real: '67', centavo: '10', desconto: '4%' },
+          semestral: { real: '64', centavo: '30', desconto: '8%' },
+          anual: { real: '59', centavo: '41', desconto: '15%' }
       },
       linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=32&billingcycle=monthly'
     },
@@ -61,10 +61,10 @@
       contasEmail: 'ilimitado',
       dominios: '4 sites',
       precos: {
-        mensal: { real: '139', centavo: '90', desconto: '0%' },
-        trimestral: { real: 'XX', centavo: 'XX', desconto: 'XX%' },
-        semestral: { real: 'XX', centavo: 'XX', desconto: 'XX%' },
-        anual: { real: '117', centavo: '90', desconto: '15%' }
+          mensal: { real: '139', centavo: '90', desconto: '0%' },
+          trimestral: { real: '134', centavo: '30', desconto: '4%' },
+          semestral: { real: '127', centavo: '88', desconto: '8%' },
+          anual: { real: '117', centavo: '90', desconto: '15%' }
       },
       linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=33&billingcycle=monthly'
     },
