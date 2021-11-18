@@ -6,8 +6,8 @@ section.apresentacao {
   justify-content: flex-start;
   padding: 200px 80px;
   position: relative;
-  background-color: var(--cor-secundaria-3);
-  background-image: url('../../../../../files/images/global/background-3.png');
+  background-color: var(--cor-secundaria-2);
+  background-image: url('../../../../../files/images/global/background-2.png');
   background-size: cover;
   background-position: center;
   overflow: hidden;

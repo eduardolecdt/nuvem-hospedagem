@@ -39,16 +39,15 @@ section.contato .texto p {
   padding: 10px 0 20px 0;
 }
 
-section.contato .texto button {
+section.contato .texto div {
   position: relative;
   background-color: transparent;
   padding: 0 0 0 60px;
   margin: 40px 0 0 0;
   text-align: left;
-  transition: all 0.3s;
 }
 
-section.contato .texto button img {
+section.contato .texto div img {
   position: absolute;
   top: 50%;
   left: 0;
@@ -58,23 +57,19 @@ section.contato .texto button img {
   pointer-events: none;
 }
 
-section.contato .texto button h3 {
+section.contato .texto div h3 {
   font-family: var(--fonte-bold);
   font-size: clamp(1rem, 3vw, 1.2rem);
   color: var(--cor-branco);
   pointer-events: none;
 }
 
-section.contato .texto button h4 {
+section.contato .texto div h4 {
   font-family: var(--fonte-light);
   font-size: clamp(1rem, 3vw, 1.2rem);
   color: var(--cor-texto);
   padding: 5px 0 0 0;
   pointer-events: none;
-}
-
-section.contato .texto button:hover {
-  opacity: 0.6;
 }
 
 section.contato .formulario {
@@ -87,61 +82,15 @@ section.contato .formulario {
   background-color: var(--cor-secundaria-1);
   margin-left: auto;
   padding: 80px;
+  min-height: 600px;
 }
 
-section.contato .formulario label {
+section.contato .formulario p {
   font-family: var(--fonte-bold);
   font-size: clamp(0.8rem, 3vw, 1rem);
   color: var(--cor-branco);
-}
-
-section.contato .formulario input {
-  font-family: var(--fonte-bold);
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  color: var(--cor-principal);
-  width: 100%;
-  background-color: transparent;
-  margin: 10px 0 30px 0;
-}
-
-section.contato .formulario input::placeholder {
-  font-family: var(--fonte-light);
-  opacity: 1;
-  color: var(--cor-principal);
-}
-
-section.contato .formulario input:focus {
-  font-family: var(--fonte-light);
-  opacity: 1;
-  color: var(--cor-branco);
-}
-
-section.contato .formulario textarea {
-  font-family: var(--fonte-bold);
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  color: var(--cor-principal);
-  line-height: 1.6;
-  width: 100%;
-  background-color: transparent;
-  margin: 10px 0 30px 0;
-  resize: none;
-  scrollbar-width: none;
-}
-
-section.contato .formulario textarea::-webkit-scrollbar {
-  display: none;
-}
-
-section.contato .formulario textarea::placeholder {
-  font-family: var(--fonte-light);
-  opacity: 1;
-  color: var(--cor-principal);
-}
-
-section.contato .formulario textarea:focus {
-  font-family: var(--fonte-light);
-  opacity: 1;
-  color: var(--cor-branco);
+  line-height: 1.5;
+  margin: 0 0 20px 0;
 }
 
 section.contato .formulario button {
@@ -194,5 +143,6 @@ section.contato .formulario button:hover img {
   }
   section.contato .formulario {
     padding: 50px 20px;
+    min-height: auto;
   }
 }

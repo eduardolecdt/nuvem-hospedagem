@@ -68,7 +68,7 @@
 
 </head>
 <body>
-    
+
   <!-- Nav -->
   <nav>
     <img name="logo" class="logo" src="./files/images/global/logo-nuvem-1.svg">
@@ -82,6 +82,10 @@
     </button>
     <button type="button" class="abrir" name="abrirSuporte">
       Suporte
+      <img src="./files/images/global/seta.svg">
+    </button>
+    <button type="button" class="abrir" name="abrirEmpresa">
+      Empresa
       <img src="./files/images/global/seta.svg">
     </button>
     <button type="button" class="registrar" data-url="https://cliente.nuvemhospedagem.com.br/register.php">
@@ -131,11 +135,6 @@
     <!-- Quadro Suporte -->
     <div class="quadro suporte" name="quadroSuporte">
       <div class="losango"></div>
-      <button type="button" data-pagina="/sobre-nos">
-        <img src="./files/images/pages/sobre-nos/icone-nuvem.png">
-        <h3>Sobre a Nuvem</h3>
-        <p>Conheça mais sobre a Nuvem, uma empresa com mais de 10 anos de história.</p>
-      </button>
       <button type="button" data-pagina="/contato">
         <img src="./files/images/pages/contato/icone-chat.png">
         <h3>Falar com Suporte</h3>
@@ -145,6 +144,15 @@
         <img src="./files/images/pages/contato/icone-duvida.png">
         <h3>Perguntas Frequentes</h3>
         <p>Dezenas de perguntas que já respondemos para os clientes da nuvem!</p>
+      </button>
+    </div>
+    <!-- Quadro Empresa -->
+    <div class="quadro empresa" name="quadroEmpresa">
+      <div class="losango"></div>
+      <button type="button" data-pagina="/sobre-nos">
+        <img src="./files/images/pages/sobre-nos/icone-nuvem.png">
+        <h3>Sobre a Nuvem</h3>
+        <p>Conheça mais sobre a Nuvem, uma empresa com mais de 10 anos de história.</p>
       </button>
       <button type="button" data-pagina="/indique-e-ganhe">
         <img src="./files/images/pages/indique-e-ganhe/icone-saco-dinheiro.png">
@@ -229,42 +237,6 @@
       </button>
     </div>
     <img class="principal" src="./files/images/pages/hospedagem-ssd/ssd-nuvem.png">
-  </section>
-
-
-  <!-- section -->
-  <section class="qualidades">
-    <img class="principal" src="./files/images/pages/hospedagem-ssd/icones-linhas.png">
-    <div class="texto">
-      <div class="parte">
-        <img src="./files/images/pages/hospedagem-ssd/icone-rapido.png">
-        <h2>Servidores Rápidos</h2>
-        <p>Você piscou e seu site já carregou, rápido assim. Garantimos, ficará como um foguete ou devolvemos o seu dinheiro.</p>
-      </div>
-      <div class="parte meio">
-        <h2>Certificado SSL</h2>
-        <p>Deixe o seu site mais seguro com o certificado Let's encrypt. Disponível em todos os planos gratuitamente.</p>
-        <img src="./files/images/pages/hospedagem-ssd/icone-cadeado.png">
-      </div>
-      <div class="parte">
-        <img src="./files/images/pages/hospedagem-ssd/icone-casa.png">
-        <h2>Recursos Isolados</h2>
-        <p>Cada conta tem os seus próprios recursos isolados, garantindo que não seja afetado por outros clientes e maior estabilidade</p>
-      </div>
-    </div>
-    <div class="faixa">
-      <div class="losango"></div>
-      <p>Já possui um site em outra empresa? Venha para Nuvem Hospedagem. Nós migramos seu site gratuitamente.</p>
-    </div>
-  </section>
-
-  <!-- section -->
-  <section class="painel">
-    <div class="texto">
-      <h2>Painel de <span>Controle</span></h2>
-      <p>Você terá um painel de controle 100% em português, simples de utilizar e sem burocracias.</p>
-    </div>
-    <img class="principal" src="./files/images/pages/hospedagem-ssd/cpanel.png">
   </section>
 
   <!-- section -->
@@ -356,6 +328,41 @@
         </button>
       </div>
     </div>
+  </section>
+
+  <!-- section -->
+  <section class="qualidades">
+    <img class="principal" src="./files/images/pages/hospedagem-ssd/icones-linhas.png">
+    <div class="texto">
+      <div class="parte">
+        <img src="./files/images/pages/hospedagem-ssd/icone-rapido.png">
+        <h2>Servidores Rápidos</h2>
+        <p>Você piscou e seu site já carregou, rápido assim. Garantimos, ficará como um foguete ou devolvemos o seu dinheiro.</p>
+      </div>
+      <div class="parte meio">
+        <h2>Certificado SSL</h2>
+        <p>Deixe o seu site mais seguro com o certificado Let's encrypt. Disponível em todos os planos gratuitamente.</p>
+        <img src="./files/images/pages/hospedagem-ssd/icone-cadeado.png">
+      </div>
+      <div class="parte">
+        <img src="./files/images/pages/hospedagem-ssd/icone-casa.png">
+        <h2>Recursos Isolados</h2>
+        <p>Cada conta tem os seus próprios recursos isolados, garantindo que não seja afetado por outros clientes e maior estabilidade</p>
+      </div>
+    </div>
+    <div class="faixa">
+      <div class="losango"></div>
+      <p>Já possui um site em outra empresa? Venha para Nuvem Hospedagem. Nós migramos seu site gratuitamente.</p>
+    </div>
+  </section>
+
+  <!-- section -->
+  <section class="painel">
+    <div class="texto">
+      <h2>Painel de <span>Controle</span></h2>
+      <p>Você terá um painel de controle 100% em português, simples de utilizar e sem burocracias.</p>
+    </div>
+    <img class="principal" src="./files/images/pages/hospedagem-ssd/cpanel.png">
   </section>
 
   <!-- Modal Comparar -->
@@ -489,20 +496,6 @@
     <img class="celular" src="./files/images/pages/hospedagem-ssd/celular-depoimento.png">
   </section>
 
-  <!-- section -->
-  <section class="dominio" name="dominio">
-    <h2>Registe seu <span>domínio!</span></h2>
-    <p>Com a gente o seu domínio ficará seguro e você pagará o preço de custo.</p>
-    <div class="input">
-      <img class="cadeado" src="./files/images/pages/hospedagem-ssd/icone-cadeado.png">
-      <h3>https:// www.</h3>
-      <input name="dominio" spellcheck="false" type="text" placeholder="escreva seu domínio aqui...">
-      <button type="button" name="acessar">
-        <img src="./files/images/global/check-azul.svg">
-      </button>
-    </div>
-  </section>
-
   <!-- footer -->
   <footer>
     <img src="./files/images/global/logo-nuvem-2.svg">
@@ -512,7 +505,6 @@
   <!-- JS imports -->
   <script src="./assets/js/global/global.js"></script>
   <script src="./assets/js/global/nav.js"></script>
-  <script src="./assets/js/global/dominio.js"></script>
   <script src="./assets/js/global/modal.js"></script>
   <script src="./assets/js/pages/hospedagem-ssd/colapsibles.js"></script>
 

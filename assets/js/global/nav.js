@@ -8,9 +8,11 @@
   const abrirHospedagem = nav.querySelector('button[name="abrirHospedagem"]')
   const abrirServicos = nav.querySelector('button[name="abrirServicos"]')
   const abrirSuporte = nav.querySelector('button[name="abrirSuporte"]')
+  const abrirEmpresa = nav.querySelector('button[name="abrirEmpresa"]')
   const quadroHospedagem = nav.querySelector('div[name="quadroHospedagem"]')
   const quadroServicos = nav.querySelector('div[name="quadroServicos"]')
   const quadroSuporte = nav.querySelector('div[name="quadroSuporte"]')
+  const quadroEmpresa = nav.querySelector('div[name="quadroEmpresa"]')
   const abrirMenuMobile = nav.querySelector('button[name="abrirMenuMobile"]')
   const menuMobile = nav.querySelector('div[name="menuMobile"]')
 
@@ -51,6 +53,15 @@
     })
   }
 
+  function cliqueAbrirEmpresa () {
+    abrirEmpresa.addEventListener('click', () => {
+      quadroHospedagem.classList.remove('mostrar')
+      quadroServicos.classList.remove('mostrar')
+      if (quadroEmpresa.classList.contains('mostrar')) quadroEmpresa.classList.remove('mostrar')
+      else quadroEmpresa.classList.add('mostrar')
+    })
+  }
+
   function abrirFecharMenuMobile () {
     abrirMenuMobile.addEventListener('click', () => {
       if (body.classList.contains('bloqueado')) body.classList.remove('bloqueado')
@@ -77,6 +88,7 @@
   cliqueAbrirHospedagem()
   cliqueAbrirServicos()
   cliqueAbrirSuporte()
+  cliqueAbrirEmpresa()
   abrirFecharMenuMobile()
   voltarInicioLogo()
 
