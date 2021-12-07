@@ -86,62 +86,16 @@ section.contato .formulario {
   max-width: 600px;
   background-color: var(--cor-secundaria-2);
   margin-left: auto;
-  padding: 150px 80px;
+  padding: 80px;
+  min-height: 600px;
 }
 
-section.contato .formulario label {
+section.contato .formulario p {
   font-family: var(--fonte-bold);
   font-size: clamp(0.8rem, 3vw, 1rem);
   color: var(--cor-branco);
-}
-
-section.contato .formulario input {
-  font-family: var(--fonte-bold);
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  color: var(--cor-principal);
-  width: 100%;
-  background-color: transparent;
-  margin: 10px 0 30px 0;
-}
-
-section.contato .formulario input::placeholder {
-  font-family: var(--fonte-light);
-  opacity: 1;
-  color: var(--cor-principal);
-}
-
-section.contato .formulario input:focus {
-  font-family: var(--fonte-light);
-  opacity: 1;
-  color: var(--cor-branco);
-}
-
-section.contato .formulario textarea {
-  font-family: var(--fonte-bold);
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  color: var(--cor-principal);
-  line-height: 1.6;
-  width: 100%;
-  background-color: transparent;
-  margin: 10px 0 30px 0;
-  resize: none;
-  scrollbar-width: none;
-}
-
-section.contato .formulario textarea::-webkit-scrollbar {
-  display: none;
-}
-
-section.contato .formulario textarea::placeholder {
-  font-family: var(--fonte-light);
-  opacity: 1;
-  color: var(--cor-principal);
-}
-
-section.contato .formulario textarea:focus {
-  font-family: var(--fonte-light);
-  opacity: 1;
-  color: var(--cor-branco);
+  line-height: 1.5;
+  margin: 0 0 20px 0;
 }
 
 section.contato .formulario button {
@@ -194,5 +148,6 @@ section.contato .formulario button:hover img {
   }
   section.contato .formulario {
     padding: 50px 20px;
+    min-height: auto;
   }
 }
