@@ -1,0 +1,192 @@
+/* <section class="depoimento"> */
+
+section.depoimento {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 80px;
+  position: relative;
+  background-color: var(--cor-secundaria-2);
+  background-image: url('../../../../../files/images/global/background-2.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+section.depoimento .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 550px;
+}
+
+section.depoimento .texto h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  width: 100%;
+  max-width: 350px;
+}
+
+section.depoimento .texto h2 span {
+  color: var(--cor-principal);
+}
+
+section.depoimento .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 0 0;
+}
+
+section.depoimento img.placeholder1 {
+  position: absolute;
+  top: 80px;
+  right: 600px;
+  width: 100%;
+  max-width: 100px;
+  animation: perfilMexendo 30s linear infinite;
+  z-index: 2;
+}
+
+@keyframes perfilMexendo {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+section.depoimento img.placeholder2 {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 100%;
+  max-width: 70px;
+  animation: perfilMexendo2 30s linear infinite;
+  z-index: 2;
+}
+
+@keyframes perfilMexendo2 {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(40px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+section.depoimento img.placeholder3 {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  width: 100%;
+  max-width: 50px;
+  animation: perfilMexendo3 30s linear infinite;
+  z-index: 2;
+}
+
+@keyframes perfilMexendo3 {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-40px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+section.depoimento .quadro {
+  background-color: var(--cor-secundaria-3);
+  padding: 30px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  width: 100%;
+  max-width: 500px;
+  animation: quadroMexendo 30s linear infinite;
+  z-index: 2;
+}
+
+section.depoimento .quadro p {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-branco);
+  line-height: 1.6;
+}
+
+@keyframes quadroMexendo {
+  0% {
+    transform: translate(10px, -50%);
+  }
+  50% {
+    transform: translate(30px, -50%);
+  }
+  100% {
+    transform: translate(10px, -50%);
+  }
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.depoimento {
+    padding: 80px 50px 350px 20px;
+  }
+  section.depoimento img.placeholder1 {
+    top: auto;
+    bottom: 30px;
+    right: 40px;
+    width: 100%;
+    max-width: 100px;
+    animation: perfilMexendo 30s linear infinite;
+    z-index: 2;
+  }
+  @keyframes perfilMexendo {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(50px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  section.depoimento img.placeholder2 {
+    display: none;
+  }
+  section.depoimento img.placeholder3 {
+    display: none;
+  }
+  section.depoimento .quadro {
+    top: auto;
+    bottom: 120px;
+    right: 40px;
+    max-width: 300px;
+  }
+  @keyframes quadroMexendo {
+    0% {
+      transform: translate(10px, 0);
+    }
+    50% {
+      transform: translate(30px, 0);
+    }
+    100% {
+      transform: translate(10px, 0);
+    }
+  }
+}

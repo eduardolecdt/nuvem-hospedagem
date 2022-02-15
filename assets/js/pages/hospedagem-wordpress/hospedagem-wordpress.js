@@ -156,7 +156,7 @@
     /* ---- Callbacks ---- */
 
     function callbackClickAssinar () {
-      const url = buttonAssinar.getAttribute('data-url')
+      const url = buttonAssinar.getAttribute('data-pagina')
       window.location.assign(url)
     }
 
@@ -238,7 +238,7 @@
       h3Centavo.innerText = ''
       pDesconto.innerText = ''
 
-      buttonAssinar.removeAttribute('data-url')
+      buttonAssinar.removeAttribute('data-pagina')
       desativarBotoesPlanos()
       desativarBotoesPrecos()
       limparPotenciaProcessamento()
@@ -252,7 +252,7 @@
       pDominios.innerText = dados.dominios
       h2NomePlano.innerText = dados.nome
 
-      buttonAssinar.setAttribute('data-url', dados.linkBotao)
+      buttonAssinar.setAttribute('data-pagina', dados.linkBotao)
       selecionarPotenciaProcessamento(dados.processamentoIndice)
     }
 

@@ -13,12 +13,17 @@
       contasEmail: 'ilimitado',
       dominios: '1 site',
       precos: {
-          mensal: { real: '24', centavo: '90', desconto: '0%' },
-          trimestral: { real: '23', centavo: '90', desconto: '4%' },
-          semestral: { real: '22', centavo: '90', desconto: '8%' },
-          anual: { real: '21', centavo: '16', desconto: '15%' },
+        mensal: { real: '24', centavo: '90', desconto: '0%' },
+        trimestral: { real: '23', centavo: '90', desconto: '4%' },
+        semestral: { real: '22', centavo: '90', desconto: '8%' },
+        anual: { real: '21', centavo: '16', desconto: '15%' },
       },
-      linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=30&billingcycle=monthly'
+      linkBotao: {
+        mensal: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=30&billingcycle=monthly' },
+        trimestral: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=30&billingcycle=quarterly' },
+        semestral: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=30&billingcycle=semiannually' },
+        anual: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=30&billingcycle=annually' },
+      }
     },
     ssdIntermediario: {
       nome: 'Intermediário',
@@ -29,12 +34,17 @@
       contasEmail: 'ilimitado',
       dominios: '1 site',
       precos: {
-          mensal: { real: '39', centavo: '90', desconto: '0%' },
-          trimestral: { real: '37', centavo: '90', desconto: '5%' },
-          semestral: { real: '36', centavo: '70', desconto: '8%' },
-          anual: { real: '33', centavo: '90', desconto: '15%' }
+        mensal: { real: '39', centavo: '90', desconto: '0%' },
+        trimestral: { real: '37', centavo: '90', desconto: '5%' },
+        semestral: { real: '36', centavo: '70', desconto: '8%' },
+        anual: { real: '33', centavo: '90', desconto: '15%' }
       },
-      linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=31&billingcycle=monthly'
+      linkBotao: {
+        mensal: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=31&billingcycle=monthly' },
+        trimestral: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=31&billingcycle=quarterly' },
+        semestral: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=31&billingcycle=semiannually' },
+        anual: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=31&billingcycle=annually' },
+      }
     },
     ssdAvancado: {
       nome: 'Avançado',
@@ -50,7 +60,12 @@
           semestral: { real: '64', centavo: '30', desconto: '8%' },
           anual: { real: '59', centavo: '41', desconto: '15%' }
       },
-      linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=32&billingcycle=monthly'
+      linkBotao: {
+          mensal: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=32&billingcycle=monthly' },
+          trimestral: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=32&billingcycle=quarterly' },
+          semestral: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=32&billingcycle=semiannually' },
+          anual: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=32&billingcycle=annually' },
+      }
     },
     ssdEspecial: {
       nome: 'Especial',
@@ -66,7 +81,12 @@
           semestral: { real: '127', centavo: '88', desconto: '8%' },
           anual: { real: '117', centavo: '90', desconto: '15%' }
       },
-      linkBotao: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=33&billingcycle=monthly'
+      linkBotao: {
+          mensal: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=33&billingcycle=monthly' },
+          trimestral: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=33&billingcycle=quarterly' },
+          semestral: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=33&billingcycle=semiannually' },
+          anual: { caminho: 'https://cliente.nuvemhospedagem.com.br/cart.php?a=add&pid=33&billingcycle=annually' },
+      }
     },
   }
 
@@ -157,7 +177,7 @@
   /* ---- Callbacks ---- */
 
   function callbackClickAssinar () {
-    const url = buttonAssinar.getAttribute('data-url')
+    const url = buttonAssinar.getAttribute('data-pagina')
     window.location.assign(url)
   }
 
@@ -239,7 +259,7 @@
     h3Centavo.innerText = ''
     pDesconto.innerText = ''
 
-    buttonAssinar.removeAttribute('data-url')
+    buttonAssinar.removeAttribute('data-pagina')
     desativarBotoesPlanos()
     desativarBotoesPrecos()
     limparPotenciaProcessamento()
@@ -253,7 +273,7 @@
     pDominios.innerText = dados.dominios
     h2NomePlano.innerText = dados.nome
 
-    buttonAssinar.setAttribute('data-url', dados.linkBotao)
+    buttonAssinar.setAttribute('data-pagina', dados.linkBotao["mensal"].caminho)
     selecionarPotenciaProcessamento(dados.processamentoIndice)
   }
 
@@ -262,6 +282,12 @@
     h4Real.innerText = preco.real
     h3Centavo.innerText = `,${preco.centavo}`
     pDesconto.innerText = `${preco.desconto} de desconto`
+    importarCaminhoBotao(periodo)
+  }
+  
+  function importarCaminhoBotao(periodo) {
+    const url = STATE[STATE.seletor].linkBotao[periodo]
+    buttonAssinar.setAttribute('data-pagina', url.caminho)
   }
 
   // Botao do Plano

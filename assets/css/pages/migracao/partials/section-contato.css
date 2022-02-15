@@ -1,0 +1,153 @@
+/* <section class="contato"> */
+
+section.contato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-secundaria-1);
+  background-image: url('../../../../../files/images/global/background-1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+section.contato .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 550px;
+  padding: 80px;
+}
+
+section.contato .texto h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+section.contato .texto h2 span {
+  color: var(--cor-principal);
+}
+
+section.contato .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 10px 0 20px 0;
+}
+
+section.contato .texto button {
+  position: relative;
+  background-color: transparent;
+  padding: 0 0 0 60px;
+  margin: 40px 0 0 0;
+  text-align: left;
+  transition: all 0.3s;
+}
+
+section.contato .texto button img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 100%;
+  max-width: 40px;
+  pointer-events: none;
+}
+
+section.contato .texto button h3 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-branco);
+  pointer-events: none;
+}
+
+section.contato .texto button h4 {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  padding: 5px 0 0 0;
+  pointer-events: none;
+}
+
+section.contato .texto button:hover {
+  opacity: 0.6;
+}
+
+section.contato .formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--cor-secundaria-2);
+  margin-left: auto;
+  padding: 80px;
+  min-height: 700px;
+}
+
+section.contato .formulario p {
+  font-family: var(--fonte-bold);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+section.contato .formulario button {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-principal);
+  background-color: transparent;
+  border: 3px solid var(--cor-principal);
+  border-radius: 100px;
+  padding: 20px 90px 20px 30px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+section.contato .formulario button img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 100%;
+  max-width: 40px;
+  pointer-events: none;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+
+section.contato .formulario button:hover {
+  border: 3px solid var(--cor-branco);
+  color: var(--cor-branco);
+}
+
+section.contato .formulario button:hover img {
+  opacity: 0.5;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.contato {
+    flex-direction: column;
+  }
+  section.contato .texto {
+    padding: 100px 20px 70px 20px;
+  }
+  section.contato .texto button {
+    padding: 0 0 0 45px;
+    margin: 20px 0 0 0;
+  }
+  section.contato .texto button img {
+    max-width: 30px;
+  }
+  section.contato .formulario {
+    padding: 50px 20px;
+    min-height: auto;
+  }
+}

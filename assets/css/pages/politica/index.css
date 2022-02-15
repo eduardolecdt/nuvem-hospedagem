@@ -1,0 +1,12 @@
+/* Index */
+
+@import '../../global/global.css';
+
+/* Elements */
+
+@import '../../elements/nav.css';
+@import '../../elements/footer.css'; 
+
+/* Partials */
+
+@import './partials/section-informacao.css';

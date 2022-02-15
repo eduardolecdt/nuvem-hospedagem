@@ -1,0 +1,63 @@
+/* <section class="informacao"> */
+
+section.informacao {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: var(--cor-secundaria-3);
+  background-image: url('../../../../../files/images/global/background-3.png');
+  background-size: cover;
+  background-position: center;
+  padding: 110px 80px 80px 80px;
+  min-height: 100vh;
+}
+
+section.informacao img {
+  width: 100%;
+  max-width: 250px;
+}
+
+section.informacao .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0 0 50px;
+}
+
+section.informacao .texto h2 {
+  font-family: var(--fonte-bold);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+
+section.informacao .texto h2 span {
+  color: var(--cor-principal);
+}
+
+section.informacao .texto p {
+  font-family: var(--fonte-light);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  padding: 20px 0 0 0;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.informacao {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 20px;
+  }
+  section.informacao img {
+    max-width: 200px;
+  }
+  section.informacao .texto {
+    padding: 30px 0 0 0;
+  }
+}

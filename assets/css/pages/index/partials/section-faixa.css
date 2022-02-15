@@ -1,0 +1,27 @@
+/* <section class="faixa"> */
+
+section.faixa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  width: 100%;
+  background-color: var(--cor-principal);
+}
+
+section.faixa img {
+  width: 100%;
+  max-width: 120px;
+  margin: 0 15px;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1000px) {
+  section.faixa {
+    padding: 20px;
+  }
+  section.faixa img {
+    max-width: 100px;
+  }
+}

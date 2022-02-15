@@ -26,42 +26,54 @@
     })
   }
 
+  // ABRIR HOSPEDAGEM
   function cliqueAbrirHospedagem () {
     abrirHospedagem.addEventListener('click', () => {
       quadroServicos.classList.remove('mostrar')
       quadroSuporte.classList.remove('mostrar')
+      quadroEmpresa.classList.remove('mostrar')
       if (quadroHospedagem.classList.contains('mostrar')) quadroHospedagem.classList.remove('mostrar')
       else quadroHospedagem.classList.add('mostrar')
     })
   }
 
+  // ABRIR SERVIÇOS
   function cliqueAbrirServicos () {
     abrirServicos.addEventListener('click', () => {
       quadroHospedagem.classList.remove('mostrar')
       quadroSuporte.classList.remove('mostrar')
-      if (quadroServicos.classList.contains('mostrar')) quadroServicos.classList.remove('mostrar')
+      quadroEmpresa.classList.remove('mostrar')
+      if (quadroServicos.classList.contains('mostrar')) 
+      quadroServicos.classList.remove('mostrar')
       else quadroServicos.classList.add('mostrar')
     })
   }
 
+  // ABRIR SUPORTE
   function cliqueAbrirSuporte () {
     abrirSuporte.addEventListener('click', () => {
       quadroHospedagem.classList.remove('mostrar')
       quadroServicos.classList.remove('mostrar')
-      if (quadroSuporte.classList.contains('mostrar')) quadroSuporte.classList.remove('mostrar')
+      quadroEmpresa.classList.remove('mostrar')
+      if (quadroSuporte.classList.contains('mostrar')) 
+      quadroSuporte.classList.remove('mostrar')
       else quadroSuporte.classList.add('mostrar')
     })
   }
 
+  // ABRIR EMPRESA
   function cliqueAbrirEmpresa () {
     abrirEmpresa.addEventListener('click', () => {
       quadroHospedagem.classList.remove('mostrar')
       quadroServicos.classList.remove('mostrar')
-      if (quadroEmpresa.classList.contains('mostrar')) quadroEmpresa.classList.remove('mostrar')
+      quadroSuporte.classList.remove('mostrar')
+      if (quadroEmpresa.classList.contains('mostrar')) 
+      quadroEmpresa.classList.remove('mostrar')
       else quadroEmpresa.classList.add('mostrar')
     })
   }
 
+  // ABRIR MENU
   function abrirFecharMenuMobile () {
     abrirMenuMobile.addEventListener('click', () => {
       if (body.classList.contains('bloqueado')) body.classList.remove('bloqueado')
@@ -73,6 +85,7 @@
     })
   }
 
+  // VOLTAR AO INÍCIO
   function voltarInicioLogo () {
     logoNav.addEventListener('click', () => {
       const a = document.createElement('a')
